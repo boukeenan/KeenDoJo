@@ -6,7 +6,160 @@
              xmlns:local="clr-namespace:KeenDoJo.controls.InterfaceControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="PathStyles"
+               TargetType="Path">
+            <Setter Property="StrokeThickness" Value="3" />
+            <Setter Property="Visibility" Value="Hidden" />
+        </Style>
+        <Style x:Name="FunnelPath"
+               TargetType="Path"
+               BasedOn="{StaticResource PathStyles}">
+            <Setter Property="Stroke" Value="Black" />
+        </Style>
+
+        <Style x:Key="GreenRepeatOrdersStyle"
+               TargetType="Path"
+               BasedOn="{StaticResource PathStyles}">
+            <Setter Property="Fill" Value="#FF83C74D" />
+            <Setter Property="Stroke" Value="#FF83C74D" />
+        </Style>
+        <Style x:Key="YellowOrdersStyle"
+               TargetType="Path"
+               BasedOn="{StaticResource PathStyles}">
+            <Setter Property="Fill" Value="#FFFDC900" />
+            <Setter Property="Stroke" Value="#FFFDC900" />
+        </Style>
+        <Style x:Key="BlueImpressionsStyle"
+               TargetType="Path"
+               BasedOn="{StaticResource PathStyles}">
+            <Setter Property="Fill" Value="#597BB1" />
+            <Setter Property="Stroke" Value="#597BB1" />
+        </Style>
+        <Style x:Key="RedProductTrialsStyle"
+               TargetType="Path"
+               BasedOn="{StaticResource PathStyles}">
+            <Setter Property="Fill" Value="#E55560" />
+            <Setter Property="Stroke" Value="#E55560" />
+        </Style>
+    </UserControl.Resources>
     <Grid>
-            
+        <Path x:Name="FunnelDataPath"
+              Visibility="Visible"
+              Data="M100,0 490,0 379,350 379,450 211,450 211,350 100, 0" />
+        <Path x:Name="GreenDataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              Data="M490,0L100,0 100,0 389,0" />
+
+        <Path x:Name="Green01DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M490,0L100,0 211,0 389,0" />
+
+        <Path x:Name="Green02DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              Data="M377.710460913584,389.122165150946L222.433208258299,386.050656670313 200.450395318778,350 389,432.016682558759" />
+
+        <Path x:Name="Green03DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M404.633683735473,295.823868243409L193.077877623268,293.488803316612 211,350 389,430.022896352032" />
+
+        <Path x:Name="Green04DataPath"
+              Visibility="Hidden"
+              Opacity="0.5"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M211,450 389,450 389,384.157303045138 211,384.157303045138" />
+
+        <Path x:Name="Yellow01DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              
+              Data="M162.786260645282,197.974695728366L432.415620981325,199.549828282537 389,350 211,350" />
+
+        <Path x:Name="Green05DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M490,0L100,0 211,0 389,0" />
+
+        <Path x:Name="Green06DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M389,350L211,350 211,350 389,350" />
+
+        <Path x:Name="Blue02DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource BlueImpressionsStyle}"
+              
+              Data="M100,0 490,0 472.176263637077,61.7654230398327 119.433842580682,61.2778820111608" />
+
+        <Path x:Name="Yellow02DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              Data="M158.301527742047,183.833646033482L436.52879091123,185.296269119498 389,350 211,350 211,350 389,350 389,385.714285714286 211,385.714285714286 211,350" />
+
+        <Path x:Name="Yellow03DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              Data="M443.212692047327,162.134235479561 389,350 211,350 211,350 389,350 389,393.75 211,393.75 211,350" />
+
+        <Path x:Name="Green07DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M389,393.75L211,393.75 211,350 389,350" />
+
+        <Path x:Name="Green08DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              
+              Data="M211,393.75 406.004612258097,447.368146759766 389,350" />
+
+        <Path x:Name="Yellow04DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              Data="M151.013836774291,160.854440279297L443.212692047327,162.134235479561 389,350 211,350 211,350 389,350 389,393.75 211,393.75 211,350" />
+
+        <Path x:Name="Yellow05DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              Data="M151.013836774291,160.854440279297L438.986163225709,160.854440279297 379,350 211,350 211,350 379,350 379,393.75 211,393.75 211,350" />
+
+        <Path x:Name="Green09DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M389,450 211,450 211,393.75 389,350" />
+
+        <Path x:Name="Green10DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M379,450 211,450 211,393.75 379,393.75" />
+
+        <Path x:Name="Green11DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M211,450 379,450 389.58064762726,316.637597571701 200.41935237274,316.637597571701 211,350" />
+
+        <Path x:Name="Green12FunnelIssueDataPath"
+              Visibility="Visible"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              Data="M211,450L379,450 211,450 211,262.5 379,262.5 379,450" />
+
+        <Path x:Name="Yellow06DataPath"
+              Visibility="Visible"
+              Style="{StaticResource BlueImpressionsStyle}"
+              
+              Data="M452.899027800515,116.985047475852 415.798055601031,233.970094951705 174.201944398969,233.970094951705" />
     </Grid>
 </UserControl>

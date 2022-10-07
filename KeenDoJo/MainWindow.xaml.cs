@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KeenDoJo.controls.InterfaceControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,24 @@ namespace KeenDoJo
 		public MainWindow()
 		{
 			InitializeComponent();
+		}
+
+		public static SecondWindow window { get; set; }
+
+		private void OpenExercise02_Click(object sender, RoutedEventArgs e)
+		{
+			window = new SecondWindow();
+			window.Show();
+		}
+
+		private void Window_Loaded(object sender, RoutedEventArgs e)
+		{
+			//window.owner
+		}
+
+		private void FunnelTestTwo_Loaded(object sender, RoutedEventArgs e)
+		{
+
 		}
 	}
 }
