@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,71 @@ namespace KeenDoJo.controls.InterfaceControls
 			// Ensure all textboxes have a value, they have default values
 			if (CheckNulls()) return;
 
+			// Create points or a single Ellipse
+			if (txtPoints.Text != "")
+			{
+				CreateEllipses(txtPoints.Text);
+			}
+
+			else
+			{
+				CreateEllipseSingle();
+			}
+		}
+
+		private void CreateEllipses(string text)
+		{
+			char[] chars = new[] { '\r', '\n' };
+
+			string[] strings = text.Split(chars, StringSplitOptions.RemoveEmptyEntries);
+
+			foreach (string strLine in strings)
+			{
+				Console.WriteLine(strLine);
+				CreateEllise(strLine);
+			}
+		}
+
+		// TODO: Put all CreateEllipse in common function, once we think about it
+		private void CreateEllise(string strLine)
+		{
+			Ellipse ellipse = new Ellipse
+			{
+				Width = Convert.ToDouble(WidthTextBox.Text),
+				Height = Convert.ToDouble(HeightTextBox.Text),
+				Stroke = Brushes.Red,
+				StrokeThickness = 1,
+				Fill = Brushes.Blue,
+				Visibility = Visibility.Visible
+			};
+
+			ellipse.Fill = (SolidColorBrush)new BrushConverter().ConvertFromString(FillTextBox.Text);
+			ellipse.Stroke = (SolidColorBrush)new BrushConverter().ConvertFromString(StrokeTextBox.Text);
+
+			string strToolTip = "(" + strLine + ")";
+			ellipse.ToolTip = strToolTip;
+
+			// TODO: Double check to ensure name not already in use
+			ellipse.Name = "Ellipse" + FunnelDataPathCanvas.Children.Count;
+			ellipse.Uid = "Ellipse" + FunnelDataPathCanvas.Children.Count;
+
+			ellipse.MouseUp += Ellipse_MouseUp;
+
+			string[] coordinates = strLine.Split(',');
+			double[] doubles = new double[coordinates.Length];
+			for (int i = 0; i < coordinates.Length; i++)
+			{
+				doubles[i] = Convert.ToDouble(coordinates[i]);
+			}
+
+			Canvas.SetLeft(ellipse, doubles[0] - (Convert.ToDouble(WidthTextBox.Text) / 2));
+			Canvas.SetTop(ellipse, doubles[1] - (Convert.ToDouble(HeightTextBox.Text)) / 2);
+			Canvas.SetZIndex(ellipse, 99);
+			FunnelDataPathCanvas.Children.Add(ellipse);
+		}
+
+		private void CreateEllipseSingle()
+		{
 			Ellipse ellipse = new Ellipse
 			{
 				Width = Convert.ToDouble(WidthTextBox.Text),
@@ -73,7 +139,6 @@ namespace KeenDoJo.controls.InterfaceControls
 			Canvas.SetTop(ellipse, (Convert.ToDouble(TopTextBox.Text)) - (Convert.ToDouble(HeightTextBox.Text)) / 2);
 			Canvas.SetZIndex(ellipse, 99);
 			FunnelDataPathCanvas.Children.Add(ellipse);
-			//EllipsePracticeAreaGrid.Children.Add(ellipse);
 		}
 
 		private void Ellipse_MouseUp(object sender, MouseButtonEventArgs e)

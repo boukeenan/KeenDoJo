@@ -86,28 +86,32 @@
 
         <!--#region Button Grid -->
         <Grid x:Name="ButtonGrid"
-              ShowGridLines="True"
+              ShowGridLines="False"
               Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -193,7 +197,7 @@
                     Click="CreateFunnelPathSectionsButton_Click"
                     />
             <Button x:Name="CreateFunnelPathButton"
-                    Grid.Row="16" Grid.Column="2"
+                    Grid.Row="20" Grid.Column="2"
                     Content="Create Funnel"
                     Click="CreateFunnelPathButton_Click"
                     />
@@ -202,13 +206,24 @@
                      Text="M100,0 490,0 379,350 379,450 211,450 211,350 100, 0"
                      Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="3" />
 
+            <Grid Grid.Row="16" Grid.RowSpan="3"
+                  Grid.Column="0" Grid.ColumnSpan="3"
+                  Background="Transparent"
+                  >
+                <TextBox x:Name="txtPoints"
+                         Background="Orange"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         Width="275"/>
+            </Grid>
+
             <Label x:Name="ErrorMessagesLabel"
-                   Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="3"
+                   Grid.Row="20" Grid.Column="0" Grid.ColumnSpan="3"
                    Foreground="Red"
                    FontWeight="Bold"
                    ToolTip="Click to clear"
                    MouseLeftButtonUp="ErrorMessagesLabel_MouseLeftButtonUp"
-                   Visibility="Hidden">
+                   Visibility="Visible">
                 <Label.Content>
                     <AccessText TextWrapping="Wrap" Text="Error messages" />
                 </Label.Content>
@@ -217,11 +232,11 @@
             <Button x:Name="ClearEllipsesButton"
                     Content="Clear Ellipses"
                     Click="ClearEllipseButton_Click"
-                    Grid.Row="18" Grid.Column="0" />
+                    Grid.Row="22" Grid.Column="0" />
             <Button x:Name="CreateEllipseButton"
                     Content="Create Ellipse"
                     Click="CreateEllipseButton_Click"
-                    Grid.Row="18" Grid.Column="2" />
+                    Grid.Row="22" Grid.Column="2" />
 
         </Grid>
         
