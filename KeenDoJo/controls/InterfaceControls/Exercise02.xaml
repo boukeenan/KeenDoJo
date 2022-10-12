@@ -7,6 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="800">
     <UserControl.Resources>
+        <Style x:Key="BriStylesGrid"
+           TargetType="Grid">
+            <Setter Property="Background" Value="#fbfbfb" />
+        </Style>
         <Style x:Key="PathStyles"
                TargetType="Path">
             <Setter Property="StrokeThickness" Value="3" />
@@ -53,7 +57,7 @@
         </Style>
     </UserControl.Resources>
     <Grid x:Name="EllipsePracticeAreaGrid"
-          Background="AliceBlue"
+          Style="{StaticResource BriStylesGrid}"
           ShowGridLines="False">
         <Grid.RowDefinitions>
             <RowDefinition Height="10" />
@@ -72,7 +76,7 @@
         <Canvas x:Name="FunnelDataPathCanvas"
                 Grid.Row="1" Grid.Column="1"
                 Opacity="0.5"
-                Background="Orange">
+                Background="AliceBlue">
             <Path x:Name="FunnelDataPath"
               Grid.Row="1" Grid.Column="1"
               Stroke="Black"
@@ -182,6 +186,12 @@
                      Style="{StaticResource PropertiesTextBox}"
                      Text=""
                      Grid.Row="13" Grid.Column="23" />
+            <Button x:Name="CreateFunnelPathSectionsButton"
+                    Visibility="Hidden"
+                    Grid.Row="16" Grid.Column="0"
+                    Content="Create Funnel"
+                    Click="CreateFunnelPathSectionsButton_Click"
+                    />
             <Button x:Name="CreateFunnelPathButton"
                     Grid.Row="16" Grid.Column="2"
                     Content="Create Funnel"

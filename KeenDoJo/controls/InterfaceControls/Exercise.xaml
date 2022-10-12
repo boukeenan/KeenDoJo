@@ -152,14 +152,146 @@
               Data="M211,450 379,450 389.58064762726,316.637597571701 200.41935237274,316.637597571701 211,350" />
 
         <Path x:Name="Green12FunnelIssueDataPath"
-              Visibility="Visible"
+              Visibility="Hidden"
               Style="{StaticResource GreenRepeatOrdersStyle}"
               Data="M211,450L379,450 211,450 211,262.5 379,262.5 379,450" />
 
-        <Path x:Name="Yellow06DataPath"
-              Visibility="Visible"
+        <Path x:Name="Blue03DataPath"
+              Visibility="Hidden"
               Style="{StaticResource BlueImpressionsStyle}"
               
               Data="M452.899027800515,116.985047475852 415.798055601031,233.970094951705 174.201944398969,233.970094951705" />
+
+        <Path x:Name="Green16DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M211,450 379,450 379,350 211,350 211,450 385.870550407312,328.336102319287 204.129449592688,328.336102319287 211,350" />
+
+        <Path x:Name="Green17DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M211,350 211,450 379,450 379,350 385.870550407312,328.336102319287 204.129449592688,328.336102319287 211,350" />
+
+        <Path x:Name="Green18DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M211,450L379,450 211,450 211,327.272727272727 379,327.272727272727 379,450" />
+
+        <Path x:Name="Green19DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M379,450 211,450 211,450 379,450 379,450" />
+
+        <!-- Funnel working -->
+        <Path x:Name="Green20DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M211,350L211,350 379,350 385.870550407312,328.336102319287 204.129449592688,328.336102319287 211,350" />
+
+        <Path x:Name="Green21DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M379,450 211,450 211,100 379,100 379,450" />
+
+        <Path x:Name="Green22DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M379,450 211,450 211,100 379,100 379,450" />
+
+        <Path x:Name="Yellow06DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              Data="M435.585240774089,171.57806963125 379,350 211,350 211,350 379,350 379,405 211,405 211,350" />
+
+
+        <Path x:Name="Yellow07DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              Data="M435.585240774089,171.57806963125 379,350 222.433208258299,386.050656670313 211,350 211,350 379,350 379,405 211,405 211,350" />
+
+
+        <Path x:Name="Yellow08DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              Data="M435.585240774089,171.57806963125 379,350 222.433208258299,386.050656670313 211,350 211,350 379,350 379,405 211,405 211,350" />
+
+        <Path x:Name="Yellow09DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              Data="M435.585240774089,171.57806963125 367.566791741701,386.050656670313 211,350 379,405 211,405 211,350 211,350" />
+
+        <Path x:Name="Yellow10DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              
+              Data="M440.532037067354,155.980063301137 428.165046334192,194.975079126421 161.834953665808,194.975079126421 161.834953665808,194.975079126421" />
+
+        <Path x:Name="Green23DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M211,350L211,350 379,350 422.971522606797,211.351054843434 167.028477393203,211.351054843434 211,350" />
+
+        <Path x:Name="Yellow11DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              
+              Data="M440.532037067354,155.980063301137 149.467962932646,155.980063301137 161.834953665808,194.975079126421 161.834953665808,194.975079126421 161.834953665808,194.975079126421" />
+
+        <Path x:Name="Yellow12DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              Data="M440.532037067354,155.980063301137 149.467962932646,155.980063301137 428.165046334192,194.975079126421 161.834953665808,194.975079126421 161.834953665808,194.975079126421" />
+
+        <Path x:Name="Yellow13DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              
+              Data="M440.532037067354,155.980063301137 149.467962932646,155.980063301137 161.834953665808,194.975079126421 428.165046334192,194.975079126421 " />
+
+        <Path x:Name="Yellow14DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+            
+              Data="M440.532037067354,155.980063301137 149.467962932646,155.980063301137 161.834953665808,194.975079126421 428.165046334192,194.975079126421" />
+
+        <Path x:Name="Yellow15DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              
+              Data="M440.532037067354,155.980063301137 149.467962932646,155.980063301137 161.834953665808,194.975079126421 428.165046334192,194.975079126421 440.532037067354,155.980063301137" />
+
+        <Path x:Name="Yellow16DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource YellowOrdersStyle}"
+              
+              Data="M428.165046334192,194.975079126421 161.834953665808,194.975079126421 211,350 211,409.090909090909 379,409.090909090909 379,350 379,350 379,350 428.165046334192,194.975079126421" />
+
+        <Path x:Name="Yellow17DataPath"
+              Visibility="Visible"
+              Style="{StaticResource YellowOrdersStyle}"
+              
+              Data="M416.749362580505,230.97047834976 173.250637419495,230.97047834976 183.715014193709,263.966260971154 406.284985806291,263.966260971154 416.749362580505,230.97047834976" />
+
+        <Path x:Name="Green24DataPath"
+              Visibility="Hidden"
+              Style="{StaticResource GreenRepeatOrdersStyle}"
+              
+              Data="M211,350 379,350 401.091462078895,280.342236688168 188.908537921105,280.342236688168 211,350" />
+
+
+        <Path x:Name="Yellow18DataPath"
+              Visibility="Visible"
+              Style="{StaticResource YellowOrdersStyle}"
+              
+              Data="M384.193523727396,333.624024282987 205.806476272604,333.624024282987 211,350 211,400 379,400 379,350 379,350 379,350 384.193523727396,333.624024282987" />
+
     </Grid>
 </UserControl>

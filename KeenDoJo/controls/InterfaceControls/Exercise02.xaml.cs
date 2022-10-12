@@ -62,11 +62,33 @@ namespace KeenDoJo.controls.InterfaceControls
 			ellipse.Fill = (SolidColorBrush)new BrushConverter().ConvertFromString(FillTextBox.Text);
 			ellipse.Stroke = (SolidColorBrush)new BrushConverter().ConvertFromString(StrokeTextBox.Text);
 
+			string strToolTip = "(" + LeftTextBox.Text + ", " + TopTextBox.Text + ")";
+			ellipse.ToolTip = strToolTip;
+			ellipse.Name = "Ellipse" + FunnelDataPathCanvas.Children.Count;
+			ellipse.Uid = "Ellipse" + FunnelDataPathCanvas.Children.Count;
+
+			ellipse.MouseUp += Ellipse_MouseUp;
+
 			Canvas.SetLeft(ellipse, (Convert.ToDouble(LeftTextBox.Text)) - (Convert.ToDouble(WidthTextBox.Text) / 2));
 			Canvas.SetTop(ellipse, (Convert.ToDouble(TopTextBox.Text)) - (Convert.ToDouble(HeightTextBox.Text)) / 2);
 			Canvas.SetZIndex(ellipse, 99);
 			FunnelDataPathCanvas.Children.Add(ellipse);
 			//EllipsePracticeAreaGrid.Children.Add(ellipse);
+		}
+
+		private void Ellipse_MouseUp(object sender, MouseButtonEventArgs e)
+		{
+			for (int k = FunnelDataPathCanvas.Children.Count - 1; k >= 0; k--)
+			{
+				UIElement child = FunnelDataPathCanvas.Children[k];
+				Ellipse targetEllipse = (Ellipse)sender;
+
+				if (child is Ellipse)
+				{
+					if (child.Uid == targetEllipse.Uid)
+						FunnelDataPathCanvas.Children.RemoveAt(k);
+				}
+			}
 		}
 
 		private void ClearEllipseButton_Click(object sender, RoutedEventArgs e)
@@ -142,5 +164,10 @@ namespace KeenDoJo.controls.InterfaceControls
 		}
 
 		#endregion
+
+		private void CreateFunnelPathSectionsButton_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }
