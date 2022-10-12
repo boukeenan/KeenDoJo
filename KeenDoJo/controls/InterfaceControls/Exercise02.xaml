@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:KeenDoJo.controls.InterfaceControls"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="800">
+             d:DesignHeight="800" d:DesignWidth="800">
     <UserControl.Resources>
         <Style x:Key="BriStylesGrid"
            TargetType="Grid">
@@ -86,28 +86,42 @@
 
         <!--#region Button Grid -->
         <Grid x:Name="ButtonGrid"
-              ShowGridLines="True"
+              ShowGridLines="False"
               Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="30" />
                 <RowDefinition Height="10" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -192,36 +206,57 @@
                     Content="Create Funnel"
                     Click="CreateFunnelPathSectionsButton_Click"
                     />
-            <Button x:Name="CreateFunnelPathButton"
-                    Grid.Row="16" Grid.Column="2"
-                    Content="Create Funnel"
-                    Click="CreateFunnelPathButton_Click"
-                    />
             <TextBox x:Name="PathTextBox"
                      Style="{StaticResource PropertiesTextBox}"
                      Text="M100,0 490,0 379,350 379,450 211,450 211,350 100, 0"
                      Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="3" />
 
-            <Label x:Name="ErrorMessagesLabel"
-                   Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="3"
-                   Foreground="Red"
-                   FontWeight="Bold"
-                   ToolTip="Click to clear"
-                   MouseLeftButtonUp="ErrorMessagesLabel_MouseLeftButtonUp"
-                   Visibility="Hidden">
-                <Label.Content>
-                    <AccessText TextWrapping="Wrap" Text="Error messages" />
-                </Label.Content>
-            </Label>
+            <Grid Grid.Row="16" Grid.RowSpan="9"
+                  Grid.Column="0" Grid.ColumnSpan="3"
+                  Background="Transparent"
+                  >
+                <TextBox x:Name="txtPoints"
+                         Background="Transparent"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         Width="275"/>
+            </Grid>
+            <CheckBox x:Name="RetainEllipseCheckBox"
+                      VerticalAlignment="Center"
+                      Grid.Row="26" Grid.Column="0">
+                <CheckBox.Content>
+                    <StackPanel>
+                        <TextBlock>Retain Ellipse</TextBlock>
+                        <TextBlock></TextBlock>
+                    </StackPanel>
+                </CheckBox.Content>
+            </CheckBox>
+            <Button x:Name="CreateFunnelPathButton"
+                    Grid.Row="26" Grid.Column="2"
+                    Content="Create Funnel"
+                    Click="CreateFunnelPathButton_Click"
+                    />
 
             <Button x:Name="ClearEllipsesButton"
                     Content="Clear Ellipses"
                     Click="ClearEllipseButton_Click"
-                    Grid.Row="18" Grid.Column="0" />
+                    Grid.Row="28" Grid.Column="0" />
             <Button x:Name="CreateEllipseButton"
                     Content="Create Ellipse"
                     Click="CreateEllipseButton_Click"
-                    Grid.Row="18" Grid.Column="2" />
+                    Grid.Row="28" Grid.Column="2" />
+
+            <Label x:Name="ErrorMessagesLabel"
+                   Grid.Row="30" Grid.Column="0" Grid.ColumnSpan="3"
+                   Foreground="Red"
+                   FontWeight="Bold"
+                   ToolTip="Click to clear"
+                   MouseLeftButtonUp="ErrorMessagesLabel_MouseLeftButtonUp"
+                   Visibility="Visible">
+                <Label.Content>
+                    <AccessText TextWrapping="Wrap" Text="Error messages" />
+                </Label.Content>
+            </Label>
 
         </Grid>
         
