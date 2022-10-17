@@ -246,6 +246,17 @@
                     Click="CreateEllipseButton_Click"
                     Grid.Row="28" Grid.Column="2" />
 
+            <Grid Grid.Row="16" Grid.RowSpan="3"
+                  Grid.Column="0" Grid.ColumnSpan="3"
+                  Background="Transparent"
+                  >
+                <TextBox x:Name="txtPoints"
+                         Background="Orange"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         Width="275"/>
+            </Grid>
+
             <Label x:Name="ErrorMessagesLabel"
                    Grid.Row="30" Grid.Column="0" Grid.ColumnSpan="3"
                    Foreground="Red"
