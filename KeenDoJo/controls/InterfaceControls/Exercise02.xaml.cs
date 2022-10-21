@@ -145,8 +145,6 @@ namespace KeenDoJo.controls.InterfaceControls
 						
 			double[] doubles = new double[coordinates.Length];
 
-			if ((doubles[0] == 0) && (doubles[1] == 0)) return;
-
 			try
 			{
 				for (int i = 0; i < coordinates.Length; i++)

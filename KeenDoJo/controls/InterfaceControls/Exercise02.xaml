@@ -248,9 +248,10 @@
 
             <Grid Grid.Row="16" Grid.RowSpan="3"
                   Grid.Column="0" Grid.ColumnSpan="3"
+                  Visibility="Hidden"
                   Background="Transparent"
                   >
-                <TextBox x:Name="txtPoints"
+                <TextBox x:Name="txtPoints2"
                          Background="Orange"
                          TextWrapping="Wrap"
                          AcceptsReturn="True"

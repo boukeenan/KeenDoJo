@@ -352,5 +352,10 @@
               Data="M135.307605448043,111.330287448785 454.692394551957,111.330287448785 379,350 379,389.656006070747 211,389.656006070747 211,350 135.307605448043,111.330287448785"
               />
 
+        <!-- In the StrokeDashArray, the first number is dash length and the second number is the gash gap-->
+        <Rectangle Width="50"
+                   Height="50"
+            StrokeDashArray="10 2 10 2" Stroke="Black" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+
     </Grid>
 </UserControl>
