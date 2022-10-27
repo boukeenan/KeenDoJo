@@ -27,6 +27,7 @@ namespace KeenDoJo
 		}
 
 		public static SecondWindow window { get; set; }
+		public static Exercise03Window Exercise03Window { get; set; }
 
 		private void OpenExercise02_Click(object sender, RoutedEventArgs e)
 		{
@@ -42,6 +43,12 @@ namespace KeenDoJo
 		private void FunnelTestTwo_Loaded(object sender, RoutedEventArgs e)
 		{
 
+		}
+
+		private void OpenExercise03_Click(object sender, RoutedEventArgs e)
+		{
+			Exercise03Window = new Exercise03Window();
+			Exercise03Window.Show();
 		}
 	}
 }

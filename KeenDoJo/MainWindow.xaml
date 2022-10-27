@@ -43,10 +43,19 @@
             </Grid.ColumnDefinitions>
 
             <Button x:Name="OpenExercise02"
-                Grid.Row="0" Grid.Column="3"
+                Grid.Row="0" Grid.Column="2"
                 Content="Open Exercise02"
                 Click="OpenExercise02_Click"
                 Background="Moccasin"
+                >
+
+            </Button>
+
+            <Button x:Name="OpenExercise03"
+                Grid.Row="0" Grid.Column="3"
+                Content="Open Exercise03"
+                Click="OpenExercise03_Click"
+                Background="Cornsilk"
                 >
 
             </Button>
