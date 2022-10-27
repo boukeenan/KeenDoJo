@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="KeenDoJo.controls.InterfaceControls.Exercise03UserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KeenDoJo.controls.InterfaceControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="Blue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="175" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Border BorderBrush="Orange"
+                BorderThickness="2">
+            <StackPanel x:Name="UpDownArrows2StackPanel"
+                        Grid.Row="0" Grid.Column="0"
+                        Orientation="Horizontal">
+
+                <Polygon x:Name="VersusTargetTriangleUpPolygon"
+                         Fill="#82C655"
+                         Stroke="#82C655"
+                         Points="5,0 0,10 10,10" />
+
+                <Polygon x:Name="VersusTargetTriangleDownPolygon"
+                         Fill="#E75460"
+                         Stroke="#E75460"
+                         Points="0,0 10,0 5,10" />
+
+                <Polygon x:Name="VersusTargetTriangleNoChangePolygon"
+                         Fill="#FDC900"
+                         Stroke="#FDC900"
+                         Points="0,4 10,4 10,6 0,6 0,4" />
+
+
+
+            </StackPanel>
+        </Border>
+
+        <StackPanel x:Name="UpDownArrowsStackPanel"
+                    Grid.Row="1" Grid.Column="0"
+                    Orientation="Horizontal">
+            <Polygon x:Uid="VersusTargetTrianglePolygonUid"
+                     x:Name="VersusTargetTrianglePolygon"
+                     Fill="#82C655"
+                     Stroke="#82C655"
+                     Points="15,10 10,20 20,20" />
+
+            <Polygon x:Name="VersusLastYearTargetPolygon"
+                     Fill="#E75460"
+                     Stroke="#E75460"
+                     Points="10,10 20,10 15,20" />
+        </StackPanel>
+
+
+
+        <Canvas x:Name="MainLineGraphCanvas"
+                Grid.Row="1" Grid.Column="1"
+                Height="175"
+                Width="300"
+                Background="OrangeRed">
+            <Path Stroke="Aqua" StrokeThickness="2">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigureCollection>
+                                <PathFigure StartPoint="0,150">
+                                    <PathFigure.Segments>
+                                        <PathSegmentCollection>
+                                            <PolyBezierSegment 
+                                                Points="0,100 9.67741935483871,50 19.3548387096774,150 29.0322580645161,83.3333333333333 38.7096774193548,33.3333333333333 48.3870967741936,100 58.0645161290323,83.3333333333333 67.741935483871,50 77.4193548387097,83.3333333333333 87.0967741935484,150 96.7741935483871,0 106.451612903226,116.666666666667 116.129032258064,0 125.806451612903,133.333333333333 135.483870967742,50 145.161290322581,100 154.838709677419,133.333333333333 164.516129032258,150 174.193548387097,50 183.870967741936,66.6666666666667 193.548387096774,83.3333333333333 203.225806451613,116.666666666667 212.903225806452,50 222.58064516129,0 232.258064516129,66.6666666666667 241.935483870968,33.3333333333333 251.612903225807,0 261.290322580645,150 270.967741935484,83.3333333333333 280.645161290323,50 290.322580645161,150" />
+                                        </PathSegmentCollection>
+                                    </PathFigure.Segments>
+                                </PathFigure>
+                            </PathFigureCollection>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+        </Canvas>
+    </Grid>
+</UserControl>
