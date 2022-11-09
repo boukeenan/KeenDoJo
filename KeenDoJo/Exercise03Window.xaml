@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KeenDoJo"
         xmlns:ex03="clr-namespace:KeenDoJo.controls.InterfaceControls"
+             xmlns:brushes="clr-namespace:KeenDoJo.shared.brushes"
         mc:Ignorable="d"
         Title="Exercise03Window" Height="450" Width="800">
     <Grid>
@@ -16,7 +17,9 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <ex03:Exercise03UserControl />
+            <ex03:Exercise03UserControl x:Name="Exercise03Practices"
+                                        BrushColour="{x:Static brushes:AppBrushes.NavajoWhiteBrush}"
+                />
 
         </Grid>
     </Grid>

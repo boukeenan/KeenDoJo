@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:funneltest="clr-namespace:KeenDoJo.controls.InterfaceControls"
+        xmlns:AppBrushes="clr-namespace:KeenDoJo.shared.brushes"
         xmlns:local="clr-namespace:KeenDoJo"
         mc:Ignorable="d"
         Title="MainWindow" Height="780" Width="1650">
@@ -40,6 +41,9 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
                 <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
             <Button x:Name="OpenExercise02"
@@ -56,6 +60,15 @@
                 Content="Open Exercise03"
                 Click="OpenExercise03_Click"
                 Background="Cornsilk"
+                >
+
+            </Button>
+
+            <Button x:Name="OpenExercise04"
+                Grid.Row="0" Grid.Column="4"
+                Content="Open Exercise04"
+                Click="OpenExercise04_Click"
+                Background="{x:Static AppBrushes:AppBrushes.BarBlueBrush}" 
                 >
 
             </Button>

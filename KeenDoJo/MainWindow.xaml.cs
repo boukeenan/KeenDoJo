@@ -50,5 +50,10 @@ namespace KeenDoJo
 			Exercise03Window = new Exercise03Window();
 			Exercise03Window.Show();
 		}
+
+		private void OpenExercise04_Click(object sender, RoutedEventArgs e)
+		{
+			exercise
+		}
 	}
 }

@@ -58,12 +58,16 @@
     <Compile Include="controls\InterfaceControls\Exercise03UserControl.xaml.cs">
       <DependentUpon>Exercise03UserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="controls\InterfaceControls\Exercise04UserControl.xaml.cs">
+      <DependentUpon>Exercise04UserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Exercise03Window.xaml.cs">
       <DependentUpon>Exercise03Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="SecondWindow.xaml.cs">
       <DependentUpon>SecondWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="shared\brushes\AppBrushes.cs" />
     <Page Include="controls\InterfaceControls\Exercise.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -73,6 +77,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="controls\InterfaceControls\Exercise03UserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\InterfaceControls\Exercise04UserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,6 +136,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="shared\enums\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

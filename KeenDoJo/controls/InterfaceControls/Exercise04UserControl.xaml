@@ -1,0 +1,163 @@
+﻿<UserControl x:Class="KeenDoJo.controls.InterfaceControls.Exercise04UserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:data="clr-namespace:KeenDoJo.controls.InterfaceControls"
+             xmlns:AppBrushes="clr-namespace:KeenDoJo.shared.brushes"
+
+             mc:Ignorable="d" 
+             d:Height="150" Width="320"
+             d:DesignHeight="150" d:DesignWidth="320">
+    <UserControl.Resources>
+        <Style x:Name="MarkerLineStyle"
+               TargetType="Line">
+            <Setter Property="Stroke" Value="{x:Static AppBrushes:AppBrushes.BlackBrush}" />
+            <Setter Property="StrokeThickness" Value="5" />
+        </Style>
+        <Style x:Name="MarkerPolylineStyle"
+               TargetType="Polyline">
+            <Setter Property="Stroke" Value="{x:Static AppBrushes:AppBrushes.BlackBrush}" />
+            <Setter Property="StrokeThickness" Value="5" />
+        </Style>
+        <Style x:Key="ArcSegmentPathStyle"
+               TargetType="Path">
+            <Setter Property="Stroke" Value="{x:Static AppBrushes:AppBrushes.BlackBrush}" />
+            <Setter Property="StrokeThickness" Value="1" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Canvas x:Name="Exercise04Canvas"
+                Grid.Row="0" Grid.Column="0">
+
+            <Path x:Name="arcSegmentPath"
+                  Style="{StaticResource ArcSegmentPathStyle}">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigureCollection>
+                                <PathFigure StartPoint="98.1281566461771, 149.3718433538229">
+                                    <PathFigure.Segments>
+                                        <PathSegmentCollection x:Name="arcPathSegmentCollection">
+                                            <ArcSegment Size="87.5, 87.5"
+                                                        IsLargeArc="True"
+                                                        SweepDirection="Clockwise"
+                                                        Point="221.8718433538229, 149.3718433538229" />
+                                        </PathSegmentCollection>
+                                    </PathFigure.Segments>
+                                </PathFigure>
+                            </PathFigureCollection>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+
+            <!--{x:Static appbrushes:AppBrushes.WhiteBrush}">-->
+            <Ellipse x:Name="ThreeQuartersEllipse"
+                     Visibility="Hidden"
+                     Stroke="{x:Static AppBrushes:AppBrushes.BlueBrush}"
+                     StrokeThickness="5"
+                     Width="175"
+                     Height="175"
+                     Canvas.Left="72.5"
+                     
+                     />
+            <Ellipse x:Name="CenterThreeQuartersEllipse"
+                     Visibility="Hidden"
+                     Stroke="{x:Static AppBrushes:AppBrushes.BlueBrush}"
+                     StrokeThickness="5"
+                     Width="25"
+                     Height="25"
+                     Canvas.Left="147.5"
+                     Canvas.Top="75"/>
+
+            <Line x:Name="Marker45"
+                  X1="221.8718433538229" Y1="149.3718433538229"
+                  X2="211.26524163602471" Y2="138.76524163602468"
+                  Visibility="Hidden"
+                  Stroke="{x:Static AppBrushes:AppBrushes.BlackBrush}"
+                  StrokeThickness="5" 
+                  />
+
+            <Line x:Name="Marker90"
+                  X1="160" Y1="175"
+                  X2="160" Y2="160"
+                  Visibility="Hidden"
+                  Stroke="{x:Static AppBrushes:AppBrushes.BlackBrush}"
+                  StrokeThickness="5" 
+                  />
+
+            <Line x:Name="Marker135"
+                  X1="98.1281566461771" Y1="149.3718433538229"
+                  X2="108.73475836397532" Y2="138.76524163602471"
+                  Visibility="Hidden"
+                  Stroke="{x:Static AppBrushes:AppBrushes.BlackBrush}"
+                  StrokeThickness="5" 
+                  />
+
+            <Line x:Name="Marker180"
+                  X1="87.5" Y1="87.5"
+                  X2="72.5" Y2="87.5"
+                  Visibility="Visible"
+                  Stroke="{x:Static AppBrushes:AppBrushes.BlackBrush}"
+                  StrokeThickness="5" 
+                  />
+
+            <Line x:Name="Marker270"
+                  X1="160" Y1="0"
+                  X2="160" Y2="15"
+                  Visibility="Visible"
+                  Stroke="{x:Static AppBrushes:AppBrushes.BlackBrush}"
+                  StrokeThickness="5"
+                  />
+
+            <Line x:Name="Marker360" 
+                  X1="247.5" Y1="87.5"
+                  X2="232.5" Y2="87.5"
+                  Visibility="Visible"
+                  Stroke="{x:Static AppBrushes:AppBrushes.BlackBrush}"
+                  StrokeThickness="5"
+                  />
+
+            <Polyline x:Name="PointerPolyline"
+                      Visibility="Visible"
+                      Stroke="{x:Static AppBrushes:AppBrushes.BlackBrush}"
+                      Points="147.5,87.5 172.5,87.5"
+                      />
+
+            <Polyline x:Name="PointerPolyline270"
+                      Stroke="{x:Static AppBrushes:AppBrushes.BlueBrush}"
+                      Visibility="Visible"
+                      Points="160,87.5 160,0"
+                      StrokeLineJoin="Round"
+                      StrokeEndLineCap="Triangle"
+                      />
+            
+            <Ellipse x:Name="CircleBasePointer"
+                     
+                     Stroke="{x:Static AppBrushes:AppBrushes.RedBrush}"
+                     StrokeThickness="1"
+                     Width="25"
+                     Height="25"
+                     Canvas.Left="147.5"
+                     Canvas.Top="75"/>
+
+            <Polyline x:Name="PointerPolylineSideToPoint"
+                      Stroke="{x:Static AppBrushes:AppBrushes.RedBrush}"
+                      StrokeThickness="1"
+                      Visibility="Visible"
+                      Points="148,87.5 160,0 172, 87.5"
+                      StrokeLineJoin="Round"
+                      StrokeEndLineCap="Triangle"
+                      />
+        </Canvas>
+
+    </Grid>
+</UserControl>
