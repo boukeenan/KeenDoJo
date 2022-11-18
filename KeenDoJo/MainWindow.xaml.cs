@@ -28,6 +28,7 @@ namespace KeenDoJo
 
 		public static SecondWindow window { get; set; }
 		public static Exercise03Window Exercise03Window { get; set; }
+		public static Exercise04Window Exercise04Window { get; set; }
 
 		private void OpenExercise02_Click(object sender, RoutedEventArgs e)
 		{
@@ -53,7 +54,8 @@ namespace KeenDoJo
 
 		private void OpenExercise04_Click(object sender, RoutedEventArgs e)
 		{
-			exercise
+			Exercise04Window = new Exercise04Window();
+			Exercise04Window.Show();
 		}
 	}
 }

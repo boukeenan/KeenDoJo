@@ -1,0 +1,125 @@
+﻿<Window x:Class="KeenDoJo.Exercise04Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeenDoJo"
+             xmlns:appbrushes="clr-namespace:KeenDoJo.shared.brushes"
+        mc:Ignorable="d"
+        Title="Exercise04Window" Height="450" Width="800">
+    <Grid>
+        <Grid x:Name="DonutControlGrid"
+                  >
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Border x:Name="DonutBorder"
+                        Height="270"
+                        Width="400"
+                        BorderBrush="Black"
+                        BorderThickness="2">
+                <Canvas x:Name="DonutControlCanvas"
+                            Grid.Row="0" Grid.Column="0">
+                    <Ellipse x:Name="DonutStarterEllipse"
+                                 Visibility="Visible"
+                                 Height="200" Width="200"
+                                 Canvas.Left="100"
+                                 Canvas.Top="35"
+                                 StrokeThickness="5"
+                                 Stroke="{x:Static appbrushes:AppBrushes.DonutBlueBrush}"
+                                 />
+
+                    <Ellipse x:Name="CenterEllipse"
+                                 Visibility="Visible"
+                                 Height="5" Width="5"
+                                 StrokeThickness="1"
+                                 Stroke="{x:Static appbrushes:AppBrushes.DarkGoldenrodBrush}"
+                                 Fill="{x:Static appbrushes:AppBrushes.DarkGoldenrodBrush}"
+                                 Canvas.Left="197.5"
+                                 Canvas.Top="132.5"
+                                 />
+
+                    <Ellipse x:Name="StartPointOuterEllipse"
+                                 Visibility="Visible"
+                                 Height="5" Width="5"
+                                 StrokeThickness="1"
+                                 Stroke="{x:Static appbrushes:AppBrushes.DonutGreenBrush}"
+                                 Fill="{x:Static appbrushes:AppBrushes.DonutGreenBrush}"
+                                 Canvas.Left="197.5"
+                                 Canvas.Top="32.5"
+                                 Panel.ZIndex="99"
+                                 />
+
+                    <Ellipse x:Name="StartPointInnerEllipse"
+                                 Visibility="Visible"
+                                 Height="5" Width="5"
+                                 StrokeThickness="1"
+                                 Stroke="{x:Static appbrushes:AppBrushes.DonutGreenBrush}"
+                                 Fill="{x:Static appbrushes:AppBrushes.DonutGreenBrush}"
+                                 Canvas.Left="197.5"
+                                 Canvas.Top="57.5"
+                                 Panel.ZIndex="99"
+                                 />
+
+                    <Ellipse x:Name="FirstRightSidePointOuterEllipse"
+                                 Visibility="Visible"
+                                 Height="5" Width="5"
+                                 StrokeThickness="1"
+                                 Fill="{x:Static appbrushes:AppBrushes.DonutGreenBrush}"
+                                 Stroke="{x:Static appbrushes:AppBrushes.DonutGreenBrush}"
+                                 Canvas.Left="297.5"
+                                 Canvas.Top="132.5"
+                                 />
+
+                    <Ellipse x:Name="FirstRightSidePointInnerEllipse"
+                                 Visibility="Visible"
+                                 Height="5" Width="5"
+                                 StrokeThickness="1"
+                                 Fill="{x:Static appbrushes:AppBrushes.DonutGreenBrush}"
+                                 Stroke="{x:Static appbrushes:AppBrushes.DonutGreenBrush}"
+                                 Canvas.Left="272.5"
+                                 Canvas.Top="132.5"
+                                 />
+
+                    <Path x:Name="donutPath"
+                              Visibility="Hidden"
+                              Stroke="Orange"
+                              Fill="Bisque"
+                              StrokeThickness="5"
+                              Panel.ZIndex="99">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathGeometry.Figures>
+                                    <PathFigureCollection>
+                                        <PathFigure StartPoint="200, 35">
+                                            <PathFigure.Segments>
+                                                <PathSegmentCollection>
+                                                    <ArcSegment Size="100, 100"
+                                                                    RotationAngle="270"
+                                                                    IsLargeArc="False"
+                                                                    SweepDirection="Clockwise"
+                                                                    Point="300, 135"
+                                                                    />
+                                                    <LineSegment Point="275, 135" />
+                                                    <ArcSegment Size="75, 75"
+                                                                    SweepDirection="Counterclockwise"
+                                                                    Point="200, 60"
+                                                                    />
+                                                    <LineSegment Point="200, 35" />
+                                                </PathSegmentCollection>
+                                            </PathFigure.Segments>
+                                        </PathFigure>
+                                    </PathFigureCollection>
+                                </PathGeometry.Figures>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                </Canvas>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
