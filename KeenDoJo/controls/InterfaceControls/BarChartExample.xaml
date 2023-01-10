@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="KeenDoJo.controls.InterfaceControls.BarChartExample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KeenDoJo.controls.InterfaceControls"
+             xmlns:brush="clr-namespace:KeenDoJo.shared.brushes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Canvas x:Name="BarCanvas"
+                    Grid.Row="0" Grid.Column="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Rectangle x:Name="BarChartTealRectangle"
+                               Grid.Row="4" Grid.Column="1"
+                               Fill="Red"
+                               Width="100" Height="100"
+                               Canvas.Left="250"
+                               Canvas.Top="100"
+                               />
+
+                    <Rectangle x:Name="BarChartBlueRectangle"
+                               Fill="Blue"
+                               Width="100" Height="150"
+                               Canvas.Left="250"
+                               Canvas.Top="200"
+                               />
+                </Grid>
+
+                <Rectangle x:Name="TestRectangle"
+                           Fill="Green"
+                           Width="100" Height="100"
+                           Canvas.Left="100"
+                           Canvas.Top="50"
+                           />
+            </Canvas>
+        </Grid>
+    </Grid>
+</UserControl>

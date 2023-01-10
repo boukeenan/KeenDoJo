@@ -1,0 +1,36 @@
+﻿<Window x:Class="KeenDoJo.Exercise05Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ex05="clr-namespace:KeenDoJo"
+		xmlns:chart="clr-namespace:KeenDoJo.controls.InterfaceControls"
+        xmlns:shape="clr-namespace:KeenDoJo.controls.shared"
+        mc:Ignorable="d"
+        Title="Exercise05Window" Height="450" Width="800">
+    <Grid>
+		<Grid ShowGridLines="True">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="150" />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="200" />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+
+            <!--
+            <chart:BarChartExample x:Name="BarChartExampeChart"
+                                   Grid.Row="0" Grid.Column="0"
+                                   />
+            -->
+            <shape:ShapeUserControl x:Name="PracticeShapes"
+                                    Grid.Row="0" Grid.Column="0"
+                                    
+                                    />
+            <shape:ksucDynamicSizableArcGraph x:Name="SizableArc"
+                                              Grid.Row="0" Grid.Column="1"
+                                              />
+        </Grid>
+    </Grid>
+</Window>

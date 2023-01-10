@@ -1,0 +1,308 @@
+﻿<Window x:Class="KeenDoJo.Exercise06Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeenDoJo"
+        xmlns:appbrushes="clr-namespace:KeenDoJo.shared.brushes"
+        mc:Ignorable="d"
+        Title="Exercise06Window" Height="800" Width="1200">
+    <Window.Resources>
+        <Style x:Key="BriStylesGrid"
+           TargetType="Grid">
+            <Setter Property="Background" Value="#fbfbfb" />
+        </Style>
+        <Style x:Key="PathStyles"
+               TargetType="Path">
+            <Setter Property="StrokeThickness" Value="3" />
+            <Setter Property="Visibility" Value="Hidden" />
+        </Style>
+        <Style x:Name="FunnelPath"
+               TargetType="Path"
+               BasedOn="{StaticResource PathStyles}">
+            <Setter Property="Stroke" Value="Black" />
+        </Style>
+
+        <Style x:Key="GreenRepeatOrdersStyle"
+               TargetType="Path"
+               BasedOn="{StaticResource PathStyles}">
+            <Setter Property="Fill" Value="#FF83C74D" />
+            <Setter Property="Stroke" Value="#FF83C74D" />
+        </Style>
+        <Style x:Key="YellowOrdersStyle"
+               TargetType="Path"
+               BasedOn="{StaticResource PathStyles}">
+            <Setter Property="Fill" Value="#FFFDC900" />
+            <Setter Property="Stroke" Value="#FFFDC900" />
+        </Style>
+        <Style x:Key="BlueImpressionsStyle"
+               TargetType="Path"
+               BasedOn="{StaticResource PathStyles}">
+            <Setter Property="Fill" Value="#597BB1" />
+            <Setter Property="Stroke" Value="#597BB1" />
+        </Style>
+        <Style x:Key="RedProductTrialsStyle"
+               TargetType="Path"
+               BasedOn="{StaticResource PathStyles}">
+            <Setter Property="Fill" Value="#E55560" />
+            <Setter Property="Stroke" Value="#E55560" />
+        </Style>
+        <Style x:Key="PropertiesTextBox"
+               TargetType="TextBox">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Height" Value="30" />
+        </Style>
+        <Style x:Key="PropertiesTextBoxLabel"
+               TargetType="Label">
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid x:Name="EllipsePracticeAreaGrid"
+          Style="{StaticResource BriStylesGrid}"
+          ShowGridLines="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="260" />
+                <RowDefinition Height="520" />
+                <RowDefinition Height="10" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="850"/>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Canvas x:Name="FunnelDataPathCanvas"
+                    Grid.Row="1" Grid.Column="1"
+                    Opacity="0.5"
+                    Height="260"
+                    Width="850"
+                    Loaded="FunnelChartCanvas_Loaded"
+                Background="AliceBlue">
+
+            </Canvas>
+
+
+            <Canvas x:Name="FunnelDataPathCanvas2"
+                    Grid.Row="2" Grid.Column="1"
+                    Opacity="0.5"
+                    Height="520"
+                    Width="850"
+                    
+                Background="Lime">
+
+                <Path Stroke="Black" StrokeThickness="5">
+                    <Path.Data>
+                        <PathGeometry>
+                            <PathFigure StartPoint="100,50">
+                                <LineSegment Point="200,70" />
+                            </PathFigure>
+                        </PathGeometry>
+                    </Path.Data>
+                </Path>
+
+                <Path Stroke="Black" StrokeThickness="1"
+                      Panel.ZIndex="99"
+  Data="M 50,50 L 200,70" />
+
+            </Canvas>
+
+            <!--#region Button Grid -->
+            <Grid x:Name="ButtonGrid"
+                  ShowGridLines="False"
+                  Grid.Row="1" Grid.Column="2"
+                  Grid.RowSpan="4"
+                  Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <!--<Ellipse x:Name="Dot01"-->
+                <!-- Stroke -->
+                <Label x:Name="StrokeLabel"
+                   Style="{StaticResource PropertiesTextBoxLabel}"
+                   Grid.Row="1" Grid.Column="0"
+                   Content="Stroke" />
+                <TextBox x:Name="StrokeTextBox"
+                     Style="{StaticResource PropertiesTextBox}"
+                     Text="Black"
+                     Grid.Row="1" Grid.Column="2" />
+
+                <!-- Fill -->
+                <Label x:Name="FillLabel"
+                   Style="{StaticResource PropertiesTextBoxLabel}"
+                   Grid.Row="3" Grid.Column="0"
+                   Content="Fill" />
+                <TextBox x:Name="FillTextBox"
+                     Style="{StaticResource PropertiesTextBox}"
+                     Text="Orange"
+                     Grid.Row="3" Grid.Column="2" />
+
+                <!-- Width -->
+                <Label x:Name="WidthLabel"
+                   Style="{StaticResource PropertiesTextBoxLabel}"
+                   Grid.Row="5" Grid.Column="0"
+                   Content="Width" />
+                <TextBox x:Name="WidthTextBox"
+                     Style="{StaticResource PropertiesTextBox}"
+                     Text="10"
+                     Grid.Row="5" Grid.Column="2" />
+
+                <!-- Height -->
+                <Label x:Name="HeightLabel"
+                   Style="{StaticResource PropertiesTextBoxLabel}"
+                   Grid.Row="7" Grid.Column="0"
+                   Content="Height" />
+                <TextBox x:Name="HeightTextBox"
+                     Style="{StaticResource PropertiesTextBox}"
+                     Text="10"
+                     Grid.Row="7" Grid.Column="2" />
+
+                <!-- Left -->
+                <Label x:Name="LeftLabel"
+                   Style="{StaticResource PropertiesTextBoxLabel}"
+                   Grid.Row="9" Grid.Column="0"
+                   Content="Left" />
+                <TextBox x:Name="LeftTextBox"
+                     Style="{StaticResource PropertiesTextBox}"
+                     Text="100"
+                     Grid.Row="9" Grid.Column="2" />
+
+                <!-- Top -->
+                <Label x:Name="TopLabel"
+                   Style="{StaticResource PropertiesTextBoxLabel}"
+                   Grid.Row="11" Grid.Column="0"
+                   Content="Top" />
+                <TextBox x:Name="TopTextBox"
+                     Style="{StaticResource PropertiesTextBox}"
+                     Text="0"
+                     Grid.Row="11" Grid.Column="2" />
+
+                <!-- Path -->
+                <Label x:Name="PathStartLabel"
+                   Style="{StaticResource PropertiesTextBoxLabel}"
+                   Grid.Row="13" Grid.Column="0"
+                   Content="Path Start" />
+                <TextBox x:Name="PathStartTextBox"
+                     Style="{StaticResource PropertiesTextBox}"
+                     Text=""
+                     Grid.Row="13" Grid.Column="23" />
+                <Button x:Name="CreateFunnelPathSectionsButton"
+                    Visibility="Hidden"
+                    Grid.Row="16" Grid.Column="0"
+                    Content="Create Funnel"
+                    Click="CreateFunnelPathSectionsButton_Click"
+                    />
+                <TextBox x:Name="PathTextBox"
+                     Style="{StaticResource PropertiesTextBox}"
+                     Text="M100,0 490,0 379,350 379,450 211,450 211,350 100, 0"
+                     Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="3" />
+
+                <Grid Grid.Row="16" Grid.RowSpan="9"
+                  Grid.Column="0" Grid.ColumnSpan="3"
+                  Background="Transparent"
+                  >
+                    <TextBox x:Name="txtPoints"
+                         Background="Transparent"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         Width="275"/>
+                </Grid>
+                <CheckBox x:Name="RetainEllipseCheckBox"
+                      VerticalAlignment="Center"
+                      Grid.Row="26" Grid.Column="0">
+                    <CheckBox.Content>
+                        <StackPanel>
+                            <TextBlock>Retain Ellipse</TextBlock>
+                            <TextBlock></TextBlock>
+                        </StackPanel>
+                    </CheckBox.Content>
+                </CheckBox>
+                <Button x:Name="CreateFunnelPathButton"
+                    Grid.Row="26" Grid.Column="2"
+                    Content="Create Funnel"
+                    Click="CreateFunnelPathButton_Click"
+                    />
+
+                <Button x:Name="ClearEllipsesButton"
+                    Content="Clear Ellipses"
+                    Click="ClearEllipseButton_Click"
+                    Grid.Row="28" Grid.Column="0" />
+                <Button x:Name="CreateEllipseButton"
+                    Content="Create Ellipse"
+                    Click="CreateEllipseButton_Click"
+                    Grid.Row="28" Grid.Column="2" />
+
+                <Grid Grid.Row="16" Grid.RowSpan="3"
+                  Grid.Column="0" Grid.ColumnSpan="3"
+                  Visibility="Hidden"
+                  Background="Transparent"
+                  >
+                    <TextBox x:Name="txtPoints2"
+                         Background="Orange"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         Width="275"/>
+                </Grid>
+
+                <Label x:Name="ErrorMessagesLabel"
+                   Grid.Row="30" Grid.Column="0" Grid.ColumnSpan="3"
+                   Foreground="Red"
+                   FontWeight="Bold"
+                   ToolTip="Click to clear"
+                   MouseLeftButtonUp="ErrorMessagesLabel_MouseLeftButtonUp"
+                   Visibility="Visible">
+                    <Label.Content>
+                        <AccessText TextWrapping="Wrap" Text="Error messages" />
+                    </Label.Content>
+                </Label>
+
+            </Grid>
+
+            <!--#endregion-->
+
+        </Grid>
+    </Grid>
+</Window>

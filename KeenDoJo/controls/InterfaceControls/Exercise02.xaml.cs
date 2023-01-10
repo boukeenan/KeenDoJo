@@ -109,13 +109,13 @@ namespace KeenDoJo.controls.InterfaceControls
 			foreach (string strLine in strings)
 			{
 				Console.WriteLine(strLine);
-				CreateEllise(strLine, k);
+				CreateEllipse(strLine, k);
 				k++;
 			}
 		}
 
 		// TODO: Put all CreateEllipse in common function, once we think about it
-		private void CreateEllise(string strLine, int k)
+		private void CreateEllipse(string strLine, int k)
 		{
 			Ellipse ellipse = new Ellipse
 			{
@@ -270,12 +270,12 @@ namespace KeenDoJo.controls.InterfaceControls
 				UIElement child = FunnelDataPathCanvas.Children[k];
 				if (child is Ellipse)
 				{
-					if ((child as Grid) != null)
-					{
-						if (((child as Grid).Name != "innerEllipse") ||
-							((child as Grid).Name != "outerEllipse"))
+					//if ((child as Grid) != null)
+					//{
+					//	if (((child as Grid).Name != "innerEllipse") ||
+					//		((child as Grid).Name != "outerEllipse"))
 							FunnelDataPathCanvas.Children.Remove(child);
-					}
+					//}
 				}
 			}
 		}

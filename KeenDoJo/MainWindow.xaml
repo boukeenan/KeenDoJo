@@ -72,6 +72,20 @@
                 >
 
             </Button>
+
+            <Button x:Name="OpenExercise05"
+                    Grid.Row="0" Grid.Column="5"
+                    Content="Open Exercise05"
+                    Click="OpenExercise05_Click"
+                    Background="{x:Static AppBrushes:AppBrushes.AlabasterBrush}"
+                    />
+
+            <Button x:Name="OpenExercise06"
+                    Grid.Row="0" Grid.Column="6"
+                    Content="Open Exercise06"
+                    Click="OpenExercise06_Click"
+                    Background="{x:Static AppBrushes:AppBrushes.AlabasterBrush}"
+                    />
         </Grid>
     </Grid>
 </Window>
