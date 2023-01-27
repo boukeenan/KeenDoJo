@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KeenDoJo"
+             xmlns:paths="clr-namespace:KeenDoJo.controls.InterfaceControls"
         xmlns:appbrushes="clr-namespace:KeenDoJo.shared.brushes"
         mc:Ignorable="d"
         Title="Exercise06Window" Height="800" Width="1200">
@@ -95,19 +96,7 @@
                     
                 Background="Lime">
 
-                <Path Stroke="Black" StrokeThickness="5">
-                    <Path.Data>
-                        <PathGeometry>
-                            <PathFigure StartPoint="100,50">
-                                <LineSegment Point="200,70" />
-                            </PathFigure>
-                        </PathGeometry>
-                    </Path.Data>
-                </Path>
-
-                <Path Stroke="Black" StrokeThickness="1"
-                      Panel.ZIndex="99"
-  Data="M 50,50 L 200,70" />
+                
 
             </Canvas>
 

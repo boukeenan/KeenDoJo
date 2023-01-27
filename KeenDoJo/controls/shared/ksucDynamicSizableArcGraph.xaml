@@ -13,7 +13,7 @@
     <UserControl.Resources>
         <ResourceDictionary x:Name="BriResourcesDictionary">
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../../../resources/keenResources.xaml" />
+                <!--<ResourceDictionary Source="../../../resources/keenResources.xaml" />-->
             </ResourceDictionary.MergedDictionaries>
             <Style x:Key="GraphTitleLabel"
                    TargetType="Label">
