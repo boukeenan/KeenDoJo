@@ -1,0 +1,155 @@
+﻿<Window x:Class="KeenDoJo.RecentCows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeenDoJo"
+        mc:Ignorable="d"
+        Title="RecentCows" Height="675" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="CowNrGrid"
+                      Background="AliceBlue"
+                      Grid.Row="0" Grid.Column="0"
+                      Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="CowNrLabel"
+                           Grid.Row="1" Grid.Column="0"
+                           Content="Cow Number" />
+                    <TextBox x:Name="CowNrTextBox"
+                             Grid.Row="1" Grid.Column="1" />
+
+                    <Label x:Name="TopXLabel"
+                           Grid.Row="1" Grid.Column="2"
+                           Content="TopX: " />
+                    <TextBox x:Name="TopXTextBox"
+                             Grid.Row="1" Grid.Column="3" />
+
+                    <Label x:Name="ErrorLabel"
+                           Grid.Row="3" Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Visibility="Hidden"
+                           Foreground="Red"
+                           Content="error" />
+
+                </Grid>
+                
+                <Button x:Name="ConnectDatabase"
+                        Grid.Row="1" Grid.Column="1"
+                        Content="Connect" Click="ConnectDatabase_Click" />
+            </Grid>
+
+            <Grid x:Name="AverageGrid"
+                  Grid.Row="0" Grid.Column="1"
+                  Background="Lime">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <DockPanel LastChildFill="True"
+                           Grid.Row="0" Grid.Column="0">
+                    <TextBlock Text="Previous Day Milking Average"
+                               TextAlignment="Center"
+                               DockPanel.Dock="Top" />
+                    <DataGrid x:Name="dgDayMilkingAverage"
+                              ToolTip="Daily Milking Average"
+                              Background="Beige" />
+                </DockPanel>
+
+                <DockPanel LastChildFill="True"
+                           Grid.Row="1" Grid.Column="0"
+                           Grid.ColumnSpan="2">
+                    <TextBlock Text="Previous 24 Hour Milking Average"
+                               TextAlignment="Center"
+                               DockPanel.Dock="Top" />
+                    <DataGrid x:Name="dg24HourMilkingAverage"
+                              Grid.ColumnSpan="2"
+                              ToolTip="24 Hour Milking Average"
+                              Background="RosyBrown" />
+                </DockPanel>
+
+                <!-- Calculate Average -->
+                <Grid x:Name="CalculateAverageGrid"
+                      Grid.Row="0" Grid.Column="1"
+                      ShowGridLines="True"
+                      Background="Red">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition />
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="10" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="CalculateAverageButton"
+                            Grid.Row="3" Grid.Column="1"
+                            Content="Calculate Average"
+                            Click="CalculateAverageButton_Click"/>
+                </Grid>
+
+            </Grid>
+
+            <DockPanel LastChildFill="True"
+                       Grid.Row="1" Grid.Column="0"
+                       Grid.ColumnSpan="2">
+                <TextBlock Text="Previous Day Milking"
+                           TextAlignment="Center"
+                           DockPanel.Dock="Top" />
+                <DataGrid x:Name="dgMilkings"
+                          Visibility="Visible"
+                          Background="Blue" />
+            </DockPanel>
+
+            <DockPanel LastChildFill="True"
+                       Grid.Row="2" Grid.Column="0"
+                       Grid.ColumnSpan="2">
+                <TextBlock Text="Previous 24 Hour Milking"
+                           TextAlignment="Center"
+                           DockPanel.Dock="Top" />
+                <DataGrid x:Name="dg24HourMilkings"
+                          Background="Aqua" />
+            </DockPanel>
+        </Grid>
+    </Grid>
+</Window>

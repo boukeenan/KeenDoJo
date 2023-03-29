@@ -8,7 +8,7 @@
         xmlns:local="clr-namespace:KeenDoJo"
         mc:Ignorable="d"
         Title="MainWindow" Height="780" Width="1650">
-    <Grid>
+    <Grid Background="Green">
         <Grid.RowDefinitions>
             <RowDefinition Height="10" />
             <RowDefinition Height="600" />
@@ -30,6 +30,39 @@
         <funneltest:Exercise02 x:Name="FunnelTestTwo"
                                Grid.Row="1" Grid.Column="3" Loaded="FunnelTestTwo_Loaded" />
 
+        <Grid x:Name="TestGrid"
+              Grid.Row="3" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel x:Name="CalculateStackPanel"
+                        Grid.Row="0" Grid.Column="0">
+                <Button x:Name="Calculate24Button"
+                        Click="Calculate24Button_Click"
+                        Content="Calculate 24" />
+
+                <Label x:Name="Calculate24Label"
+                       Content="" />
+            </StackPanel>
+
+            <StackPanel x:Name="CowAverageStackPanel"
+                        Grid.Row="0" Grid.Column="1"
+                        Background="Yellow">
+                <Button x:Name="CalculateCowAverageButton"
+                        Click="CalculateCowAverage" 
+                        Content="Calculate Cow Average" />
+            </StackPanel>
+        </Grid>
+
         <Grid x:Name="OpenExerciseGrid"
               Grid.Row="3" Grid.Column="3"
               ShowGridLines="False">
@@ -46,46 +79,75 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="OpenExercise02"
-                Grid.Row="0" Grid.Column="2"
-                Content="Open Exercise02"
-                Click="OpenExercise02_Click"
-                Background="Moccasin"
-                >
+            <StackPanel x:Name="stackPanel"
+                        Grid.Row="0" Grid.Column="0">
+                <Button x:Name="TestButton"
+                        Content="Date Test"
+                        Click="TestButton_Click"/>
+                <Label x:Name="TestLabel"
+                       Content="Hello" />
+            </StackPanel>
 
-            </Button>
+            <StackPanel x:Name="Button1to6StackPanel"
+                        Grid.Row="0" Grid.Column="1">
+                <Button x:Name="OpenExercise02"
+                    Content="Open Exercise02"
+                    Click="OpenExercise02_Click"
+                    Background="Moccasin"
+                    >
 
-            <Button x:Name="OpenExercise03"
-                Grid.Row="0" Grid.Column="3"
-                Content="Open Exercise03"
-                Click="OpenExercise03_Click"
-                Background="Cornsilk"
-                >
+                </Button>
 
-            </Button>
+                <Button x:Name="OpenExercise03"
+                    Content="Open Exercise03"
+                    Click="OpenExercise03_Click"
+                    Background="Cornsilk"
+                    >
 
-            <Button x:Name="OpenExercise04"
-                Grid.Row="0" Grid.Column="4"
+                </Button>
+
+                <Button x:Name="OpenExercise04"
                 Content="Open Exercise04"
                 Click="OpenExercise04_Click"
                 Background="{x:Static AppBrushes:AppBrushes.BarBlueBrush}" 
                 >
 
-            </Button>
+                </Button>
 
-            <Button x:Name="OpenExercise05"
-                    Grid.Row="0" Grid.Column="5"
+                <Button x:Name="OpenExercise05"
                     Content="Open Exercise05"
                     Click="OpenExercise05_Click"
                     Background="{x:Static AppBrushes:AppBrushes.AlabasterBrush}"
                     />
 
-            <Button x:Name="OpenExercise06"
-                    Grid.Row="0" Grid.Column="6"
+                <Button x:Name="OpenExercise06"
+                    Grid.Row="0" Grid.Column="5"
                     Content="Open Exercise06"
                     Click="OpenExercise06_Click"
                     Background="{x:Static AppBrushes:AppBrushes.AlabasterBrush}"
                     />
+            </StackPanel>
+
+            <StackPanel x:Name="Button7toXStackPanel"
+                        Grid.Row="0" Grid.Column="2">
+
+                <Button x:Name="OpenExercise07"
+                    Content="Open Exercise07"
+                    Click="OpenExercise07_Click"
+                    Background="{x:Static AppBrushes:AppBrushes.AlabasterBrush}"
+                    />
+            </StackPanel>
+
+            <StackPanel x:Name="OpenRecentCowsStackPanel"
+                        Grid.Row="0" Grid.Column="3">
+
+
+                <Button x:Name="OpenRecentCows"
+                    Content="Open Recent Cows"
+                    Click="OpenRcentCows_Click"
+                    Background="{x:Static AppBrushes:AppBrushes.AlabasterBrush}"
+                    />
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

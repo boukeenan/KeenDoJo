@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -74,6 +77,11 @@
     <Compile Include="controls\shared\ShapeUserControl.xaml.cs">
       <DependentUpon>ShapeUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CowAverageTests.xaml.cs">
+      <DependentUpon>CowAverageTests.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="data\MilkSource.cs" />
+    <Compile Include="enums\BRI_ResultFlag.cs" />
     <Compile Include="Exercise03Window.xaml.cs">
       <DependentUpon>Exercise03Window.xaml</DependentUpon>
     </Compile>
@@ -85,6 +93,13 @@
     </Compile>
     <Compile Include="Exercise06Window.xaml.cs">
       <DependentUpon>Exercise06Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise07Window.xaml.cs">
+      <DependentUpon>Exercise07Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="interfaces\BRI_MilkData.cs" />
+    <Compile Include="RecentCows.xaml.cs">
+      <DependentUpon>RecentCows.xaml</DependentUpon>
     </Compile>
     <Compile Include="SecondWindow.xaml.cs">
       <DependentUpon>SecondWindow.xaml</DependentUpon>
@@ -122,6 +137,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CowAverageTests.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Exercise03Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -135,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Exercise06Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise07Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,6 +179,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RecentCows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="resources\keenResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

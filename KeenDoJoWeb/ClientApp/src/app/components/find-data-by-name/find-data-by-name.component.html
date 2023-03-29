@@ -1,0 +1,34 @@
+<p>find-data-by-name works!</p>
+
+<h1>This component fetches table and column names from the amsdb</h1>
+
+<p *ngIf="!foundData"><em>Loading ... </em></p>
+
+<table class='table table-striped' *ngIf="foundData">
+  <thead>
+    <tr>
+      <th>
+        Table Name
+      </th>
+      <th>
+        Column Name
+      </th>
+      <th>
+        Details
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of foundData">
+      <td>
+        {{ data.tableName }}
+      </td>
+      <td>
+        {{ data.columnName }}
+      </td>
+      <td>
+        {{ data.Details}}
+      </td>
+    </tr>
+  </tbody>
+</table>

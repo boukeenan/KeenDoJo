@@ -43,7 +43,7 @@
             <Setter Property="Stroke" Value="#E55560" />
         </Style>
     </UserControl.Resources>
-    <Grid>
+    <Grid Background="AliceBlue">
         <Path x:Name="FunnelDataPath"
               Visibility="Visible"
               Data="M100,0 490,0 379,350 379,450 211,450 211,350 100, 0" />
