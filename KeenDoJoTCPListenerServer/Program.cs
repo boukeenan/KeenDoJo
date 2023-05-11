@@ -1,11 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 // TCP listener Server
+
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-int PLCPort = 60111;
-//int PLCPort = 50823;
+//int PLCPort = 60111;
+int PLCPort = 50823;
 //int PLCPort = 50827;
 
 Console.WriteLine("KeenDoJoTcpListenerServer startup");

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -24,9 +25,42 @@ namespace KeenDoJo
 	/// </summary>
 	public partial class Exercise06Window : Window
 	{
+		public bool EnableDisable { get; set; } = false;
 		public Exercise06Window()
 		{
 			InitializeComponent();
+			//this.IsEnabled = EnableDisable;
+			EnableDisableControls(this);
+			//foreach(Control ctl )
+			//for
+
+		}
+
+		// Cycle through and get a reference to whatever we want disabled/enabled
+		private void EnableDisableControls(Exercise06Window win)
+		{
+			foreach (Button b in FindVisualChildren<Button>(win))
+			{
+
+			}
+		}
+
+		public static IEnumerable<T> FindVisualChildren<T>(DependencyObject dependencyObject)
+			where T : DependencyObject
+		{
+			if (dependencyObject == null) yield return (T)Enumerable.Empty<T>();
+
+			var mel = VisualTreeHelper.GetChildrenCount(dependencyObject);
+
+			for (int m = 0; m < VisualTreeHelper.GetChildrenCount(dependencyObject); m++)
+			{
+				DependencyObject ithChild = VisualTreeHelper.GetChild(dependencyObject, m);
+				if (ithChild == null) continue;
+
+				if (ithChild is T t) yield return t;
+
+				foreach (T childOfChild in FindVisualChildren<T>(ithChild)) yield return childOfChild;
+			}
 		}
 
 		#region Class variables

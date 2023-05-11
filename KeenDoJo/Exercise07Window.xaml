@@ -4,9 +4,89 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KeenDoJo"
+        xmlns:data="clr-namespace:KeenDoJo.data"
+        xmlns:con="clr-namespace:KeenDoJo.controls.InterfaceControls"
         mc:Ignorable="d"
         Title="Exercise07Window" Height="450" Width="800">
     <Grid>
-        
+        <Grid ShowGridLines="True" Background="Tan">
+            <Grid.Resources>
+                <data:NetIncome x:Key="incomeDataSource" />
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Padding" Value="8"/>
+                </Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Margin" Value="0,6,0,0"/>
+                </Style>
+            </Grid.Resources>
+            <Grid.DataContext>
+                <Binding Source="{StaticResource incomeDataSource}"/>
+            </Grid.DataContext>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="250" />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel x:Name="TotalIncomeStackPanel"
+                        Grid.Row="0" Grid.Column="0">
+
+                <Grid x:Name="TotalIncomeGrid" ShowGridLines="True" Background="Orange">
+                    <Grid.RowDefinitions>
+                        <RowDefinition  />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="TotalIncomeLabelLabel"
+                           Grid.Row="0" Grid.Column="0"
+                           Content="Total Income:" />
+                    <Label x:Name="TotalIncomeLabel"
+                           Grid.Row="0" Grid.Column="1"
+                       Content="{Binding Source={StaticResource incomeDataSource}, Path=TotalIncome}" />
+
+                    <Label x:Name="RentLabelLabel"
+                           Grid.Row="1" Grid.Column="0"
+                           Content="Rent:" />
+                    <Label x:Name="RentLabel"
+                           Grid.Row="1" Grid.Column="1"
+                           Content="{Binding Source={StaticResource incomeDataSource}, Path=Rent}" />
+
+                    <Label x:Name="FoodLabelLabel"
+                           Grid.Row="2" Grid.Column="0"
+                           Content="Food:" />
+                    <Label x:Name="FoodLabel"
+                           Grid.Row="2" Grid.Column="1"
+                       Content="{Binding Source={StaticResource incomeDataSource}, Path=Food}" />
+
+                    <Label x:Name="MiscLabelLabel"
+                           Grid.Row="3" Grid.Column="0"
+                           Content="Misc:" />
+                    <Label x:Name="MiscLabel"
+                           Grid.Row="3" Grid.Column="1"
+                       Content="{Binding Source={StaticResource incomeDataSource}, Path=Misc}" />
+
+                </Grid>
+            </StackPanel>
+
+            <StackPanel x:Name="DependencyPropertyStackPanel"
+                        Background="Purple"
+                        Grid.Row="0" Grid.Column="1">
+
+                <con:Exercise07UserControl SetButtonIsEnabled="False" />
+
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 // TCP Client
 
 using System.Net;
@@ -27,6 +28,8 @@ try
 		int received = await stream.ReadAsync(buffer);
 
 		var message = Encoding.UTF8.GetString(buffer, 0, received);
+
+		//client.
 
 		Console.WriteLine("message is: " + message);
 	}

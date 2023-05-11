@@ -147,6 +147,20 @@
                     Click="OpenRcentCows_Click"
                     Background="{x:Static AppBrushes:AppBrushes.AlabasterBrush}"
                     />
+
+
+                <Button x:Name="cmdBindingExample"
+                    Content="Binding Example"
+                    Click="BindingExample_Click"
+                    Background="{x:Static AppBrushes:AppBrushes.AlabasterBrush}"
+                    />
+
+
+                <Button x:Name="cmdPopUpWindowButton"
+                    Content="PopUp Window"
+                    Click="cmdPopUpWindowButton_Click"
+                    Background="{x:Static AppBrushes:AppBrushes.AlabasterBrush}"
+                    />
             </StackPanel>
         </Grid>
     </Grid>

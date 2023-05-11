@@ -1,0 +1,33 @@
+﻿<Window x:Class="KeenDoJo.Dialogs.WindowSelectTeachMethod"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeenDoJo.Dialogs"
+        mc:Ignorable="d"
+        Title="Select teach method" Height="450" Width="800">
+    <Grid>
+        <Grid x:Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel x:Name="ButtonStackPanel"
+                        Grid.Row="1" Grid.Column="1"
+                        Background="Orange">
+                <Button x:Name="FirstButton"
+                        Click="FirstButton_Click"
+                        Content="FirstButton" />
+
+            </StackPanel>
+            
+        </Grid>
+    </Grid>
+</Window>

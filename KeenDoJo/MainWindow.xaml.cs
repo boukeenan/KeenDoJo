@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using KeenDoJo.Dialogs;
 
 namespace KeenDoJo
 {
@@ -34,8 +35,10 @@ namespace KeenDoJo
 		public static Exercise05Window Exercise05Window { get; set; }
 		public static Exercise06Window Exercise06Window { get; set; }
 		public static Exercise07Window Exercise07Window { get; set; }
+		public static KeenPopup keenPopup { get; set; }
 		public static RecentCows RecentCows { get; set; }
 		public static CowAverageTests CowAverageTests { get; set; }
+		public static VisionConfiguration VisionConfiguration { get; set; }
 
 		private void OpenExercise02_Click(object sender, RoutedEventArgs e)
 		{
@@ -77,10 +80,34 @@ namespace KeenDoJo
 			Exercise06Window.Show();
 		}
 
+		private void OpenExercise07_Click(object sender, RoutedEventArgs e)
+		{
+			Exercise07Window = new Exercise07Window();
+			Exercise07Window.Show();
+		}
+
+		private void cmdPopUpWindowButton_Click(object sender, RoutedEventArgs e)
+		{
+			keenPopup = new KeenPopup();
+			keenPopup.Show();
+		}
+
 		private void OpenRcentCows_Click(object sender, RoutedEventArgs e)
 		{
 			RecentCows = new RecentCows();
 			RecentCows.Show();
+		}
+
+		private void CalculateCowAverage(object sender, RoutedEventArgs e)
+		{
+			CowAverageTests = new CowAverageTests();
+			CowAverageTests.Show();
+		}
+
+		private void BindingExample_Click(object sender, RoutedEventArgs e)
+		{
+			VisionConfiguration = new VisionConfiguration();
+			VisionConfiguration.Show();
 		}
 
 		private void TestButton_Click(object sender, RoutedEventArgs e)
@@ -202,18 +229,6 @@ namespace KeenDoJo
 					}
 				}
 			}
-		}
-
-		private void CalculateCowAverage(object sender, RoutedEventArgs e)
-		{
-			CowAverageTests = new CowAverageTests();
-			CowAverageTests.Show();
-		}
-
-		private void OpenExercise07_Click(object sender, RoutedEventArgs e)
-		{
-			Exercise07Window = new Exercise07Window();
-			Exercise07Window.Show();
 		}
 	}
 }
