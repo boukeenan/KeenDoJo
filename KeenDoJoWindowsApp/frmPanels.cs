@@ -39,18 +39,36 @@ namespace KeenDoJoWindowsApp
 			Graphics g = ShapesPanel.CreateGraphics();
 			Pen p = new Pen(Color.CadetBlue);
 
-			if (lstShapes.SelectedIndex ==0)
+			if (lstShapes.SelectedIndex == 0)
 			{
 				SolidBrush sb = new SolidBrush(Color.Red);
 				g.DrawEllipse(p, x - 50, y - 50, 100, 100);
 				g.FillEllipse(sb, x-50, y - 50, 100, 100);
 			}
 
-			else if (lstShapes.SelectedIndex ==1)
+			else if (lstShapes.SelectedIndex == 1)
 			{
 				SolidBrush sb = new SolidBrush(Color.Orange);
 				g.DrawRectangle(p, x - 50, y - 50, 100, 100);
 				g.FillRectangle(sb, x-50, y - 50, 100, 100);
+			}
+
+			else if (lstShapes.SelectedIndex == 2)
+			{
+				SolidBrush sb = new SolidBrush(Color.HotPink);
+
+				if ((!String.IsNullOrEmpty(txtStartAngle.Text)) &&
+					(!String.IsNullOrEmpty(txtStartAngle.Text)))
+				{
+					int iAngle = Convert.ToInt32(txtStartAngle.Text);
+					int iSweep = Convert.ToInt32(txtSweepAngle.Text);
+					g.DrawArc(p, x-50, y - 50, 100, 100, iAngle, iSweep);
+				}
+			}
+
+			else if (lstShapes.SelectedIndex == 3)
+			{
+				// Not drawing anything will erase whatever that is in the Panel
 			}
 
 			lblStatusMessages.Text = "Coordinates are: " + x + ", " + y;

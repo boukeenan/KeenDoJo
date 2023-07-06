@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeenDoJoWeb", "KeenDoJoWeb\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeenDoJoWebBackend", "KeenDoJoWebBackend\KeenDoJoWebBackend.csproj", "{C35777EB-7C7F-4502-9AA3-5653FF871C8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeenDoJoWindowsApp", "KeenDoJoWindowsApp\KeenDoJoWindowsApp.csproj", "{9BE62167-AD14-4979-B0DF-3E921399C7B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeenDoJoWindowsApp", "KeenDoJoWindowsApp\KeenDoJoWindowsApp.csproj", "{9BE62167-AD14-4979-B0DF-3E921399C7B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeenModbusClient", "KeenModbusClient\KeenModbusClient.csproj", "{715F684B-3C09-486C-8639-725E7B3B36C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeenModbusServer", "KeenModbusServer\KeenModbusServer.csproj", "{4EC1900E-2124-420A-8ADD-EFABAB894103}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{9BE62167-AD14-4979-B0DF-3E921399C7B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BE62167-AD14-4979-B0DF-3E921399C7B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BE62167-AD14-4979-B0DF-3E921399C7B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{715F684B-3C09-486C-8639-725E7B3B36C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715F684B-3C09-486C-8639-725E7B3B36C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715F684B-3C09-486C-8639-725E7B3B36C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715F684B-3C09-486C-8639-725E7B3B36C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EC1900E-2124-420A-8ADD-EFABAB894103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EC1900E-2124-420A-8ADD-EFABAB894103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EC1900E-2124-420A-8ADD-EFABAB894103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EC1900E-2124-420A-8ADD-EFABAB894103}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
