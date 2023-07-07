@@ -59,6 +59,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\IPAddresses.cs" />
     <Compile Include="controls\InterfaceControls\BarChartExample.xaml.cs">
       <DependentUpon>BarChartExample.xaml</DependentUpon>
     </Compile>
@@ -83,6 +84,7 @@
     <Compile Include="CowAverageTests.xaml.cs">
       <DependentUpon>CowAverageTests.xaml</DependentUpon>
     </Compile>
+    <Compile Include="data\IPAddressesSource.cs" />
     <Compile Include="data\MilkSource.cs" />
     <Compile Include="data\NetIncome.cs" />
     <Compile Include="Dialogs\KeenPopup.xaml.cs">
@@ -106,6 +108,9 @@
     </Compile>
     <Compile Include="Exercise07Window.xaml.cs">
       <DependentUpon>Exercise07Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise08Window.xaml.cs">
+      <DependentUpon>Exercise08Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="interfaces\BRI_MilkData.cs" />
     <Compile Include="RecentCows.xaml.cs">
@@ -183,6 +188,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Exercise07Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise08Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

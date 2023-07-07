@@ -1,0 +1,101 @@
+﻿<Window x:Class="KeenDoJo.Exercise08Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeenDoJo"
+        xmlns:data="clr-namespace:KeenDoJo.data"
+        mc:Ignorable="d"
+        Title="Exercise08Window" Height="450" Width="800">
+    <Grid>
+        <Grid ShowGridLines="True">
+            <Grid.Resources>
+                <!--<data:IPAddressesSource x:Key="ipAddress" />-->
+            </Grid.Resources>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid x:Name="IPAddressTestGrid"
+                        Grid.Row="0" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                
+                <Label x:Name="IPAddress01ComboBoxLabel"
+                       Grid.Row="0" Grid.Column="0"
+                       Content="Address1: "
+                       />
+                
+                <ComboBox x:Name="IPAddress01ComboBox"
+                          Grid.Row="0" Grid.Column="1"
+                          ItemsSource="{Binding updatedIPList01}"
+                          SelectionChanged="IPAddress01ComboBox_SelectionChanged"
+                          SourceUpdated="IPAddress01ComboBox_SourceUpdated"
+                          />
+
+                <Label x:Name="IPAddress02ComboBoxLabel"
+                       Grid.Row="1" Grid.Column="0"
+                       Content="Address2: "
+                       />
+
+                <ComboBox x:Name="IPAddress02ComboBox"
+                          Grid.Row="1" Grid.Column="1"
+                          ItemsSource="{Binding updatedIPList02}"
+                          SelectionChanged="IPAddress02ComboBox_SelectionChanged"
+                          SourceUpdated="IPAddress02ComboBox_SourceUpdated"
+                          />
+
+                <Label x:Name="IPAddress03ComboBoxLabel"
+                       Grid.Row="2" Grid.Column="0"
+                       Content="Address3: "
+                       />
+
+                <ComboBox x:Name="IPAddress03ComboBox"
+                          Grid.Row="2" Grid.Column="1"
+                          ItemsSource="{Binding updatedIPList03}"
+                          SelectionChanged="IPAddress03ComboBox_SelectionChanged"
+                          />
+
+                <Label x:Name="IPAddress04ComboBoxLabel"
+                       Grid.Row="3" Grid.Column="0"
+                       Content="Address4: "
+                       />
+
+                <ComboBox x:Name="IPAddress04ComboBox"
+                          Grid.Row="3" Grid.Column="1"
+                          ItemsSource="{Binding }"
+                          SelectionChanged="IPAddress04ComboBox_SelectionChanged"
+                          />
+
+                <Label x:Name="lblStatusMessages"
+                       Grid.Row="4" Grid.Column="0"
+                       Content="Status message"
+                       />
+
+                <Label x:Name="lblPropertyChanged"
+                       Grid.Row="5" Grid.Column="0"
+                       Content="{Binding Items}"
+                       />
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,21 +1,8 @@
-﻿using KeenDoJo.controls.InterfaceControls;
+﻿using KeenDoJo.Dialogs;
 using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using KeenDoJo.Dialogs;
 
 namespace KeenDoJo
 {
@@ -35,6 +22,7 @@ namespace KeenDoJo
 		public static Exercise05Window Exercise05Window { get; set; }
 		public static Exercise06Window Exercise06Window { get; set; }
 		public static Exercise07Window Exercise07Window { get; set; }
+		public static Exercise08Window Exercise08Window { get; set; }
 		public static KeenPopup keenPopup { get; set; }
 		public static RecentCows RecentCows { get; set; }
 		public static CowAverageTests CowAverageTests { get; set; }
@@ -84,6 +72,12 @@ namespace KeenDoJo
 		{
 			Exercise07Window = new Exercise07Window();
 			Exercise07Window.Show();
+		}
+
+		private void OpenExercise08_Click(object sender, RoutedEventArgs e)
+		{
+			Exercise08Window = new Exercise08Window();
+			Exercise08Window.Show();
 		}
 
 		private void cmdPopUpWindowButton_Click(object sender, RoutedEventArgs e)
