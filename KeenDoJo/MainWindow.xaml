@@ -142,6 +142,12 @@
                     Click="OpenExercise08_Click"
                     Background="{x:Static AppBrushes:AppBrushes.AlabasterBrush}"
                     />
+
+                <Button x:Name="OpenExercise09"
+                    Content="Open Exercise09"
+                    Click="OpenExercise09_Click"
+                    Background="{x:Static AppBrushes:AppBrushes.AlabasterBrush}"
+                    />
             </StackPanel>
 
             <StackPanel x:Name="OpenRecentCowsStackPanel"

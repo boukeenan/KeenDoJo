@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Security.Permissions;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -13,7 +7,7 @@ namespace KeenDoJo
 	/// <summary>
 	/// Interaction logic for Exercise08Window.xaml
 	/// </summary>
-	public partial class Exercise08Window : Window, INotifyPropertyChanged
+	public partial class Exercise08Window : Window //, INotifyPropertyChanged
 	{
 		public List<string> ips = new List<string>();
 
@@ -36,68 +30,47 @@ namespace KeenDoJo
 			"192.168.0.10"
 		};
 
-		/*public List<string> address2IPs = new List<string>
-		{
-			"192.168.0.1",
-			"192.168.0.2",
-			"192.168.0.3",
-			"192.168.0.4",
-			"192.168.0.5",
-			"192.168.0.6",
-			"192.168.0.7",
-			"192.168.0.8",
-			"192.168.0.9",
-			"192.168.0.10"
-		};
-
-		public List<string> address3IPs = new List<string>
-		{
-			"192.168.0.1",
-			"192.168.0.2",
-			"192.168.0.3",
-			"192.168.0.4",
-			"192.168.0.5",
-			"192.168.0.6",
-			"192.168.0.7",
-			"192.168.0.8",
-			"192.168.0.9",
-			"192.168.0.10"
-		};*/
-
 		public List<string> updatedIPList01 = new List<string>();
 		public List<string> updatedIPList02 = new List<string>();
 		public List<string> updatedIPList03 = new List<string>();
 		public List<string> updatedIPList04 = new List<string>();
 
-		public ObservableCollection<string> Items { get; set; }
+		//public BindingList<string> updatedIPList01 = new BindingList<string>();
+		//public BindingList<string> updatedIPList02 = new BindingList<string>();
+		//public BindingList<string> updatedIPList03 = new BindingList<string>();
+		//public BindingList<string> updatedIPList04 = new BindingList<string>();
 
-		public string ItemToAdd { get; set; }
+		#region Comments
 
-		private string _selectedItem;
+		//public ObservableCollection<string> Items { get; set; }
 
-		public event PropertyChangedEventHandler PropertyChanged;
+		//public string ItemToAdd { get; set; }
 
-		protected virtual void OnPropertyChanged([CallerMemberName]string propertyName = null)
-		{
-			if (this.PropertyChanged != null)
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
+		//private string _selectedItem;
 
-		public string SelectedItem
-		{
-			get
-			{
-				return _selectedItem;
-			}
+		//public event PropertyChangedEventHandler PropertyChanged;
 
-			set
-			{
-				_selectedItem = value;
-				OnPropertyChanged("SelectedItem");
-			}
-		}
+		//protected virtual void OnPropertyChanged([CallerMemberName]string propertyName = null)
+		//{
+		//	if (this.PropertyChanged != null)
+		//	{
+		//		this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		//	}
+		//}
+
+		//public string SelectedItem
+		//{
+		//	get
+		//	{
+		//		return _selectedItem;
+		//	}
+
+		//	set
+		//	{
+		//		_selectedItem = value;
+		//		OnPropertyChanged("SelectedItem");
+		//	}
+		//}
 
 		/*public ObservableCollection<IPAddresses> IPOBSERVABLECOLLECTION01
 		{
@@ -164,6 +137,7 @@ namespace KeenDoJo
 		}
 
 		public List<IPAddresses> ComboBoxOne;*/
+		#endregion
 
 		public Exercise08Window()
 		{
@@ -188,10 +162,10 @@ namespace KeenDoJo
 			updatedIPList02.AddRange(address1IPs);
 			updatedIPList03.AddRange(address1IPs);
 			updatedIPList04.AddRange(address1IPs);
-			//IPAddress01ComboBox.ItemsSource = updatedIPList01;
-			//IPAddress02ComboBox.ItemsSource = updatedIPList02;
-			//IPAddress03ComboBox.ItemsSource = updatedIPList03;
-			//IPAddress04ComboBox.ItemsSource = updatedIPList04;
+			IPAddress01ComboBox.ItemsSource = updatedIPList01;
+			IPAddress02ComboBox.ItemsSource = updatedIPList02;
+			IPAddress03ComboBox.ItemsSource = updatedIPList03;
+			IPAddress04ComboBox.ItemsSource = updatedIPList04;
 		}
 
 		private void UpdateUsedIPs()
@@ -361,9 +335,9 @@ namespace KeenDoJo
 				updatedIPList04.Remove(CB1Selected);
 
 
-				//IPAddress02ComboBox.ItemsSource = null;
-				//IPAddress03ComboBox.ItemsSource = null;
-				//IPAddress04ComboBox.ItemsSource = null;
+				IPAddress02ComboBox.ItemsSource = null;
+				IPAddress03ComboBox.ItemsSource = null;
+				IPAddress04ComboBox.ItemsSource = null;
 
 				IPAddress01ComboBox.ItemsSource = updatedIPList01;
 				IPAddress01ComboBox.SelectedValue = CB1Selected;
@@ -381,9 +355,9 @@ namespace KeenDoJo
 				updatedIPList03.Remove(CB2Selected);
 				updatedIPList04.Remove(CB2Selected);
 
-				//IPAddress01ComboBox.ItemsSource = null;
-				//IPAddress03ComboBox.ItemsSource = null;
-				//IPAddress04ComboBox.ItemsSource = null;
+				IPAddress01ComboBox.ItemsSource = null;
+				IPAddress03ComboBox.ItemsSource = null;
+				IPAddress04ComboBox.ItemsSource = null;
 
 				IPAddress01ComboBox.ItemsSource = updatedIPList01;
 				IPAddress02ComboBox.SelectedValue = CB2Selected;
@@ -399,9 +373,9 @@ namespace KeenDoJo
 				updatedIPList02.Remove(CB3Selected);
 				updatedIPList04.Remove(CB3Selected);
 
-				//IPAddress01ComboBox.ItemsSource = null;
-				//IPAddress02ComboBox.ItemsSource = null;
-				//IPAddress04ComboBox.ItemsSource = null;
+				IPAddress01ComboBox.ItemsSource = null;
+				IPAddress02ComboBox.ItemsSource = null;
+				IPAddress04ComboBox.ItemsSource = null;
 
 				IPAddress01ComboBox.ItemsSource = updatedIPList01;
 				IPAddress02ComboBox.ItemsSource = updatedIPList02;
@@ -417,9 +391,9 @@ namespace KeenDoJo
 				updatedIPList02.Remove(CB4Selected);
 				updatedIPList03.Remove(CB4Selected);
 
-				//IPAddress01ComboBox.ItemsSource = null;
-				//IPAddress02ComboBox.ItemsSource = null;
-				//IPAddress03ComboBox.ItemsSource = null;
+				IPAddress01ComboBox.ItemsSource = null;
+				IPAddress02ComboBox.ItemsSource = null;
+				IPAddress03ComboBox.ItemsSource = null;
 
 				IPAddress01ComboBox.ItemsSource = updatedIPList01;
 				IPAddress02ComboBox.ItemsSource = updatedIPList02;

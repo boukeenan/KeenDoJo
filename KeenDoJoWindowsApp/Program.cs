@@ -12,7 +12,8 @@ namespace KeenDoJoWindowsApp
 			// see https://aka.ms/applicationconfiguration.
 			ApplicationConfiguration.Initialize();
 			//Application.Run(new frmRecipeTest());
-			Application.Run(new frmPanels());
+			//Application.Run(new frmPanels());
+			Application.Run(new frmPropertyChanged());
 		}
 	}
 }
