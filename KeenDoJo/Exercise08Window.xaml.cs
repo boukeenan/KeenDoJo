@@ -262,6 +262,9 @@ namespace KeenDoJo
 			//IPAddress03ComboBox.SelectedIndex = -1;
 			//IPAddress04ComboBox.SelectedIndex = -1;
 			SetAvailableAddresses();
+
+			if (CB1Selected != "")
+				IPAddress01ComboBox.SelectedValue = CB1Selected;
 		}
 
 		private void IPAddress02ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -304,12 +307,12 @@ namespace KeenDoJo
 			if (IPAddress04ComboBox.SelectedIndex != -1)
 				CB4Selected = IPAddress04ComboBox.SelectedValue.ToString();
 
-			int k = 0;
-			while (k++ < 4)
-			{
+			//int k = 0;
+			//while (k++ < 4)
+			//{
 				RemoveIPsFromLists();
 				
-			}
+			//}
 
 			
 		}
