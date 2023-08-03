@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeenDoJoWindowsApp", "KeenD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeenModbusClient", "KeenModbusClient\KeenModbusClient.csproj", "{715F684B-3C09-486C-8639-725E7B3B36C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeenModbusServer", "KeenModbusServer\KeenModbusServer.csproj", "{4EC1900E-2124-420A-8ADD-EFABAB894103}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeenModbusServer", "KeenModbusServer\KeenModbusServer.csproj", "{4EC1900E-2124-420A-8ADD-EFABAB894103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeenSplashWinForms", "KeenSplashWinForms\KeenSplashWinForms.csproj", "{C38DA9BA-9FB9-41FB-9B39-6E5B1CC082C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{4EC1900E-2124-420A-8ADD-EFABAB894103}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EC1900E-2124-420A-8ADD-EFABAB894103}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EC1900E-2124-420A-8ADD-EFABAB894103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C38DA9BA-9FB9-41FB-9B39-6E5B1CC082C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C38DA9BA-9FB9-41FB-9B39-6E5B1CC082C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C38DA9BA-9FB9-41FB-9B39-6E5B1CC082C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C38DA9BA-9FB9-41FB-9B39-6E5B1CC082C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

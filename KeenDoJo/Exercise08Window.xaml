@@ -49,7 +49,6 @@
                           Grid.Row="0" Grid.Column="1"
                           ItemsSource="{Binding updatedIPList01}"
                           SelectionChanged="IPAddress01ComboBox_SelectionChanged"
-                          SourceUpdated="IPAddress01ComboBox_SourceUpdated"
                           />
 
                 <Label x:Name="IPAddress02ComboBoxLabel"
@@ -61,7 +60,6 @@
                           Grid.Row="1" Grid.Column="1"
                           ItemsSource="{Binding updatedIPList02}"
                           SelectionChanged="IPAddress02ComboBox_SelectionChanged"
-                          SourceUpdated="IPAddress02ComboBox_SourceUpdated"
                           />
 
                 <Label x:Name="IPAddress03ComboBoxLabel"
