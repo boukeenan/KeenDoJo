@@ -1,0 +1,74 @@
+﻿<Window x:Class="ModbusPLCComm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModbusPLCComm"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="450" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="ModbusValues"
+              Grid.Row="0" Grid.Column="0"
+              
+              >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="GetModbusValue"
+                    Grid.Row="0" Grid.Column="0"
+                    Content="GetModbusValue"
+                    Click="GetModbusValue_Click"
+                    />
+            <TextBox x:Name="txtModbusValue"
+                       Grid.Row="0" Grid.Column="1"
+                       Text="8192"
+                       />
+
+            <ListBox x:Name="lstDefaultIPAddress"
+                     Grid.Row="0" Grid.Column="2"
+                     
+                     >
+                <ListBoxItem Content="192.168.0.10"/>
+                <ListBoxItem Content="172.16.2.10"/>
+            </ListBox>
+
+            <Label x:Name="lblModbusResults"
+                   Grid.Row="0" Grid.Column="3"
+                   Background="Orange" />
+
+            <Button x:Name="ClearLabels"
+                    Grid.Row="1" Grid.Column="0"
+                    Content="Clear Labels"
+                    Click="ClearLabels_Click"
+                    />
+            
+            
+        </Grid>
+        
+        <Label x:Name="lblStatusMessages"
+               Grid.Row="2" Grid.Column="0"
+               Content="Status Messages" />
+        <Label x:Name="lblResults"
+               Grid.Row="2" Grid.Column="1"
+               Content="Modbus results"/>
+
+    </Grid>
+</Window>
