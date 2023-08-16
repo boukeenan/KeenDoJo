@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:ModbusPLCComm"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid ShowGridLines="False">
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition />
+            <RowDefinition  />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -19,9 +19,10 @@
 
         <Grid x:Name="ModbusValues"
               Grid.Row="0" Grid.Column="0"
-              
+              ShowGridLines="True"
               >
             <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
                 <RowDefinition Height="50" />
                 <RowDefinition />
             </Grid.RowDefinitions>
@@ -59,8 +60,60 @@
                     Content="Clear Labels"
                     Click="ClearLabels_Click"
                     />
-            
-            
+
+            <Button x:Name="UpdateXml"
+                    Grid.Row="2" Grid.Column="0"
+                    Content="UpdateXML"
+                    Click="UpdateXml_Click" />
+
+            <Label x:Name="lblXMLUpdateResults"
+                   Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"
+                   Background="Azure"
+                   Content="UpdateXML Results" />
+        </Grid>
+
+        <Grid x:Name="Grid32Bit"
+              Grid.Row="1" Grid.Column="0"
+              Background="Orange">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="lbl32BitNumber"
+                   Grid.Row="0" Grid.Column="0"
+                   Content="32 Bit number"
+                   />
+
+            <Grid x:Name="Grid32BitNumber"
+                  Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="cmdConver32BitNumber"
+                        Grid.Row="0" Grid.Column="0"
+                        Click="cmdConvert32BitNumber_Click"
+                        Content="Click to Convert" />
+                <TextBox x:Name="txt32BitNumber"
+                         Grid.Row="0" Grid.Column="1" />
+            </Grid>
+
+            <Label x:Name="lbl32BitStatusMessages"
+               Grid.Row="2" Grid.Column="0"
+               Content="Status Messages" />
+            <Label x:Name="lbl16BitStatusMessages"
+               Grid.Row="2" Grid.Column="1"
+               Content="Modbus results"/>
+
         </Grid>
         
         <Label x:Name="lblStatusMessages"

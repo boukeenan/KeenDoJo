@@ -3,6 +3,9 @@ using System;
 using System.Collections;
 using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Windows;
 using System.Windows.Media;
@@ -157,6 +160,68 @@ namespace ModbusPLCComm
 		private void ClearLabels_Click(object sender, RoutedEventArgs e)
 		{
 			ClearStatusMessages();
+		}
+
+		private void UpdateXml_Click(object sender, RoutedEventArgs e)
+		{
+			// KEENO: KeenDoJo, update source, not here.
+			// Read xml file from c:\ams\bri\xmldatabase\ModbusPlcAddressesDatabase.xml
+			string ReadFileName = "c:\\ams\\bri\\xmldatabase\\ModbusPlcAddressesDatabase.xml";
+			string RiteFileName = "c:\\ams\\bri\\xmldatabase\\ModbusPlcAddressesDatabase2.xml";
+
+			StringBuilder sb = new StringBuilder();
+
+			string updateText = "/Data></Cell>";
+			string PlcAddresses = "PlcAddresses>";
+			string ModbusAddresses = "ModbusAddresses>";
+
+			using (FileStream stream = File.OpenRead(ReadFileName))
+			{
+				using (StreamReader read = new StreamReader(stream))
+				{
+					string line;
+
+					while ((line = read.ReadLine()) != null)
+					{
+						lblResults.Content = line;
+
+						if (line.Contains(updateText))
+						{
+							if (line.Contains(PlcAddresses))
+							{
+								line = line.Replace(updateText, "/" + PlcAddresses);
+							}
+
+							else if (line.Contains(ModbusAddresses))
+							{
+								line = line.Replace(updateText, "/" + ModbusAddresses);
+							}
+						}
+
+						sb.AppendLine(line);
+					}
+
+					using (StreamWriter write = new StreamWriter(RiteFileName))
+					{
+						write.WriteLine(sb.ToString());
+					}
+				}
+			}
+
+			// Did the file update?
+			string updateSuccess = "How to check for success";
+			lblXMLUpdateResults.Content = updateSuccess;
+		}
+
+		private void cmdConvert32BitNumber_Click(object sender, RoutedEventArgs e)
+		{
+			if (string.IsNullOrEmpty(txt32BitNumber.Text))
+				txt32BitNumber.Text = "100005";
+
+			// get number and then convert into two 16 bit numbers
+			UInt32 xxx = Convert.ToUInt32(txt32BitNumber.Text);
+
+
 		}
 	}
 }
