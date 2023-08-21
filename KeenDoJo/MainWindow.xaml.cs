@@ -24,6 +24,7 @@ namespace KeenDoJo
 		public static Exercise07Window Exercise07Window { get; set; }
 		public static Exercise08Window Exercise08Window { get; set; }
 		public static Exercise09Window Exercise09Window { get; set; }
+		public static Exercise10Window Exercise10Window { get; set; }
 		public static KeenPopup keenPopup { get; set; }
 		public static RecentCows RecentCows { get; set; }
 		public static CowAverageTests CowAverageTests { get; set; }
@@ -85,6 +86,12 @@ namespace KeenDoJo
 		{
 			Exercise09Window = new Exercise09Window();
 			Exercise09Window.Show();
+		}
+
+		private void OpenExercise10_Click(object sender, RoutedEventArgs e)
+		{
+			Exercise10Window = new Exercise10Window();
+			Exercise10Window.Show();
 		}
 
 		private void cmdPopUpWindowButton_Click(object sender, RoutedEventArgs e)
