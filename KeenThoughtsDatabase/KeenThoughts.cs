@@ -12,7 +12,7 @@
 			message += "type out the crazy thoughts in head to sort them out.";
 			message += "started new google doc with other Keen Thoughts.  Need ";
 			message += "to make a task to complete.";
-			message += "";
+			message += "keep up the great work on neck exercises!";
 			message += "";
 			message += "";
 			message += "";

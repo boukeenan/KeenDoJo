@@ -103,8 +103,92 @@
                 </Grid>
             </Grid>
 
-            <Grid x:Name="StarterGrid"
+            <Grid x:Name="BitToIntGrid"
+                  Background="ForestGreen"
                   Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="75" />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="lblBitToInt"
+                       Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+                       Content="Bit To Int" />
+
+                <Grid x:Name="BitsAndBytesGrid"
+                      Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"
+                      Background="Transparent">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label x:Name="lblEnterBits" 
+                       Grid.Row="0" Grid.Column="0"
+                       Content="Enter bits"/>
+
+                    <TextBlock x:Name="txtEnterBits"
+                           Background="Red"
+                           Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"
+                           TextWrapping="Wrap"
+                           Text="true, true, true, false, false, false, false, false, true, true, true, false, false, true, true, true"
+                           />
+
+                    <Label x:Name="lblEnterBytes" 
+                       Grid.Row="1" Grid.Column="0"
+                       Content="Enter bytes"/>
+
+                    <TextBlock x:Name="txtEnterBytes"
+                           Background="Red"
+                           Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
+                           TextWrapping="Wrap"
+                           Text="7,231"
+                           />
+                </Grid>
+
+                <Button x:Name="cmdCalculateIntFromBits" 
+                        Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                        Content="Calculate Int From Bits" Click="cmdCalculateIntFromBits_Click"/>
+                <Label x:Name="lblBitsToIntResults" 
+                       Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"
+                       Content="Results" />
+
+                <Button x:Name="cmdCalculateIntFromBytes" 
+                        Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+                        Content="Calculate Int From Bytes" Click="cmdCalculateIntFromBytes_Click"/>
+                <Label x:Name="lblBytesToIntResults" 
+                       Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2"
+                       Content="Results" />
+            </Grid>
+
+            <Grid x:Name="StarterGrid2"
+                  Background="Orange"
+                  Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <Grid x:Name="StarterGrid3"
+                  Background="Tan"
+                  Grid.Row="1" Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition />
