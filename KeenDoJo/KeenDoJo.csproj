@@ -41,6 +41,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit">
+      <HintPath>..\KeenNewPackageReference\bin\Debug\net6.0-windows\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -117,6 +120,9 @@
     </Compile>
     <Compile Include="Exercise10Window.xaml.cs">
       <DependentUpon>Exercise10Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise11Window.xaml.cs">
+      <DependentUpon>Exercise11Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="interfaces\BRI_MilkData.cs" />
     <Compile Include="RecentCows.xaml.cs">
@@ -206,6 +212,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Exercise10Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise11Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

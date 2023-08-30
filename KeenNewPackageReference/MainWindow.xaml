@@ -1,0 +1,65 @@
+﻿<Window x:Class="KeenNewPackageReference.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeenNewPackageReference"
+        xmlns:data="clr-namespace:KeenNewPackageReference.DataSource"
+        xmlns:dvc="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"  
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <data:WindowDataSource />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblDataVisualizationToolkitMessgeOne"
+               Grid.Row="0" Grid.Column="0"
+               Content="Getting new charting toolkit" />
+
+        <Label x:Name="lblDataVisualizationToolkit"
+               Grid.Row="1" Grid.Column="0"
+               Content="In progress ..." />
+
+        <dvc:Chart x:Name="chartDataVisualization"
+                   Background="Orange"
+                   Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                   >
+            <dvc:Chart.Axes>
+                <dvc:CategoryAxis Orientation="X">
+                    <dvc:CategoryAxis.AxisLabelStyle>
+                        <Style x:Name="labelStyleX1" TargetType="Control">
+                            <Setter Property="FontSize" Value="15" />
+                            <Setter Property="LayoutTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-45" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Foreground" Value="Black" />
+                        </Style>
+                    </dvc:CategoryAxis.AxisLabelStyle>
+                </dvc:CategoryAxis>
+            </dvc:Chart.Axes>
+
+            <dvc:Chart.Series>
+                <dvc:LineSeries ItemsSource="{Binding LineInformation}"
+                                DependentValuePath="LineValue"
+                                IndependentValuePath="LineName">
+                    <dvc:LineSeries.LegendItemStyle>
+                        <Style TargetType="dvc:LegendItem">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </Style>
+                    </dvc:LineSeries.LegendItemStyle>
+                </dvc:LineSeries>
+            </dvc:Chart.Series>
+        </dvc:Chart>
+    </Grid>
+</Window>
