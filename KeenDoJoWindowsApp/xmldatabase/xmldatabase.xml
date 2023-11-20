@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--this is a comment-->
+<PlcToModbusAddresses>
+  <PlcModbusAddressInfo>
+    <PlcAddress>C2</PlcAddress>
+    <ModbusAddress>16386</ModbusAddress>
+    <AddressType>OutputCoils</AddressType>
+    <AddressPrefix>C</AddressPrefix>
+    <uiModbusAddress>16386</uiModbusAddress>
+    <InitFresh>2023-11-20T11:20:46.2833856-04:00</InitFresh>
+    <LastFresh>2023-11-20T11:20:46.290767-04:00</LastFresh>
+    <RefreshTime>250</RefreshTime>
+    <OriginatingPages>
+      <OriginatingPage />CLOCKSETUP</OriginatingPages>
+  </PlcModbusAddressInfo>
+  <ControlNames>
+    <ControlName>lblC2_CurrentWeekSelection</ControlName>
+  </ControlNames>
+  <ReadValue>1</ReadValue>
+  <ErrorMessage>Error message</ErrorMessage>
+</PlcToModbusAddresses>

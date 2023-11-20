@@ -29,7 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModbusPLCComm", "ModbusPLCC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeenThoughtsDatabase", "KeenThoughtsDatabase\KeenThoughtsDatabase.csproj", "{B77F09F5-F4E9-4688-8B29-C8F7630DB3F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeenNewPackageReference", "KeenNewPackageReference\KeenNewPackageReference.csproj", "{4D132D15-7727-4979-81E1-A1195344D68E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeenNewPackageReference", "KeenNewPackageReference\KeenNewPackageReference.csproj", "{4D132D15-7727-4979-81E1-A1195344D68E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeenDoJoUtilities", "KeenDoJoUtilities\KeenDoJoUtilities.csproj", "{D60DFD05-6B53-4572-BA4E-64B65EB693C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeenBits", "KeenBits\KeenBits.csproj", "{7546F485-418B-4E31-9F33-05C37E95AFA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +97,14 @@ Global
 		{4D132D15-7727-4979-81E1-A1195344D68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D132D15-7727-4979-81E1-A1195344D68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D132D15-7727-4979-81E1-A1195344D68E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D60DFD05-6B53-4572-BA4E-64B65EB693C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D60DFD05-6B53-4572-BA4E-64B65EB693C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D60DFD05-6B53-4572-BA4E-64B65EB693C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D60DFD05-6B53-4572-BA4E-64B65EB693C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7546F485-418B-4E31-9F33-05C37E95AFA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7546F485-418B-4E31-9F33-05C37E95AFA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7546F485-418B-4E31-9F33-05C37E95AFA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7546F485-418B-4E31-9F33-05C37E95AFA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

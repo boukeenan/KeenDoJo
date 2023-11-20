@@ -1,5 +1,15 @@
 ﻿namespace KeenThoughtsDatabase
 {
+	#region Class constructor and variables
+
+	// KEENO: Type Ctrl + K + X to bring up code snippets
+	// trying to add this class template to code snippets
+
+	// Collapse all code regions
+	// shortcut, right click in code editor, Outlining, 
+
+	// key 
+
 	public class KeenThoughts
 	{
 		public string KeenThoughtsString { get; set; } = "I figured out the r-word.";
@@ -20,5 +30,19 @@
 			message += "";
 			message += "";
 		}
+
+		#endregion
+
+		#region Code region
+
+
+
+		#endregion
+
+		#region Load and other events
+
+
+
+		#endregion
 	}
 }

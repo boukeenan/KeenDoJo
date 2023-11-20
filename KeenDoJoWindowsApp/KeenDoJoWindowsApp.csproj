@@ -13,4 +13,8 @@
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1587.40" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="xmldatabase\" />
+  </ItemGroup>
+
 </Project>
