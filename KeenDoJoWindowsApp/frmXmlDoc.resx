@@ -69,9 +69,9 @@ InitFresh
 LastFresh
 RefreshTime
 OriginatingPages
-	OriginatingPage
-ControlNames
-	ControlName
+OriginatingPage
+StepCtrlNmes
+StepCtrlNme
 ReadValue
 ErrorMessage</value>
   </data>

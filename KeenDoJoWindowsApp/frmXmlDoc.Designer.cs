@@ -33,6 +33,7 @@
 			this.cmdCreateXml = new System.Windows.Forms.Button();
 			this.lblXmlResults = new System.Windows.Forms.Label();
 			this.txtXmlTagsForXmlDoc = new System.Windows.Forms.TextBox();
+			this.cmdAddToXmlDoc = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// cmdEnd
@@ -74,11 +75,22 @@
 			this.txtXmlTagsForXmlDoc.TabIndex = 3;
 			this.txtXmlTagsForXmlDoc.Text = resources.GetString("txtXmlTagsForXmlDoc.Text");
 			// 
+			// cmdAddToXmlDoc
+			// 
+			this.cmdAddToXmlDoc.Location = new System.Drawing.Point(380, 55);
+			this.cmdAddToXmlDoc.Name = "cmdAddToXmlDoc";
+			this.cmdAddToXmlDoc.Size = new System.Drawing.Size(130, 23);
+			this.cmdAddToXmlDoc.TabIndex = 4;
+			this.cmdAddToXmlDoc.Text = "Add to Xml doc";
+			this.cmdAddToXmlDoc.UseVisualStyleBackColor = true;
+			this.cmdAddToXmlDoc.Click += new System.EventHandler(this.cmdAddToXmlDoc_Click);
+			// 
 			// frmXmlDoc
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.cmdAddToXmlDoc);
 			this.Controls.Add(this.txtXmlTagsForXmlDoc);
 			this.Controls.Add(this.lblXmlResults);
 			this.Controls.Add(this.cmdCreateXml);
@@ -96,5 +108,6 @@
 		private Button cmdCreateXml;
 		private Label lblXmlResults;
 		private TextBox txtXmlTagsForXmlDoc;
+		private Button cmdAddToXmlDoc;
 	}
 }

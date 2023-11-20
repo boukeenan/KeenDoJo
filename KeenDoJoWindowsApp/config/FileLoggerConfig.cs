@@ -11,8 +11,6 @@ namespace KeenDoJoWindowsApp.config
 		{
 			get
 			{
-				KBREAK.Break();
-
 				return ((Constants.Constants.ISLOCAL) ? Constants.Constants.FILEDEVDIRECTORYADJUSTMENT 
 					+ "xmldatabase.xml" : "xmldatabase.xml");
 			}

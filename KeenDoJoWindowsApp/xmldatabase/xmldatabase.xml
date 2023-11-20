@@ -7,15 +7,34 @@
     <AddressType>OutputCoils</AddressType>
     <AddressPrefix>C</AddressPrefix>
     <uiModbusAddress>16386</uiModbusAddress>
-    <InitFresh>2023-11-20T11:20:46.2833856-04:00</InitFresh>
-    <LastFresh>2023-11-20T11:20:46.290767-04:00</LastFresh>
+    <InitFresh>2023-11-20T17:36:15.5657695-04:00</InitFresh>
+    <LastFresh>2023-11-20T17:36:15.5699072-04:00</LastFresh>
     <RefreshTime>250</RefreshTime>
     <OriginatingPages>
-      <OriginatingPage />CLOCKSETUP</OriginatingPages>
+      <OriginatingPage>CLOCKSETUP</OriginatingPage>
+    </OriginatingPages>
+    <StepCtrlNmes>
+      <StepCtrlNme>lblC2_Stuff</StepCtrlNme>
+    </StepCtrlNmes>
+    <ReadValue>1</ReadValue>
+    <ErrorMessage>Error message</ErrorMessage>
   </PlcModbusAddressInfo>
-  <ControlNames>
-    <ControlName>lblC2_CurrentWeekSelection</ControlName>
-  </ControlNames>
-  <ReadValue>1</ReadValue>
-  <ErrorMessage>Error message</ErrorMessage>
+  <PlcModbusAddressInfo>
+    <PlcAddress>C3</PlcAddress>
+    <ModbusAddress>16387</ModbusAddress>
+    <AddressType>OutputCoils</AddressType>
+    <AddressPrefix>C</AddressPrefix>
+    <uiModbusAddress>16386</uiModbusAddress>
+    <InitFresh>2023-11-20T17:36:19.0229697-04:00</InitFresh>
+    <LastFresh>2023-11-20T17:36:19.0229841-04:00</LastFresh>
+    <RefreshTime>250</RefreshTime>
+    <OriginatingPages>
+      <OriginatingPage>CLOCKSETUP</OriginatingPage>
+    </OriginatingPages>
+    <StepCtrlNmes>
+      <StepCtrlNme>lblC3_Stuff</StepCtrlNme>
+    </StepCtrlNmes>
+    <ReadValue>1</ReadValue>
+    <ErrorMessage>Error message</ErrorMessage>
+  </PlcModbusAddressInfo>
 </PlcToModbusAddresses>
